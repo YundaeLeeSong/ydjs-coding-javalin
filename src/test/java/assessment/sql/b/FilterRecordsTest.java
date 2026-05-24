@@ -17,7 +17,8 @@ public class FilterRecordsTest {
     FilterRecords filterRecords = new FilterRecords();
 
     /**
-     * This test calls the problem1 method and then compares it to the hardcoded list here, if they are the same then
+     * This test calls the problem1 method and then compares it to the hardcoded
+     * list here, if they are the same then
      * the test passes.
      */
     @Test
@@ -37,7 +38,8 @@ public class FilterRecordsTest {
     }
 
     /**
-     * This test calls the problem2 method and then compares it to the hardcoded list here, if they are the same then
+     * This test calls the problem2 method and then compares it to the hardcoded
+     * list here, if they are the same then
      * the test passes.
      */
     @Test
@@ -57,7 +59,8 @@ public class FilterRecordsTest {
     }
 
     /**
-     * The @BeforeEach annotation runs before every test so that way we create the tables required prior to running the test
+     * The @BeforeEach annotation runs before every test so that way we create
+     * the tables required prior to running the test
      */
     @BeforeEach
     public void beforeTest(){
@@ -70,7 +73,8 @@ public class FilterRecordsTest {
     }
 
     /**
-     * The @AfterEach annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
+     * The @AfterEach annotation runs after every test so that way we drop the
+     * tables to avoid conflicts in future tests
      */
     @AfterEach
     public void cleanup(){

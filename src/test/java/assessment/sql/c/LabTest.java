@@ -30,7 +30,8 @@ public class LabTest {
     }
 
     /**
-     * The @AfterEach annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
+     * The @AfterEach annotation runs after every test so that way we drop the
+     * tables to avoid conflicts in future tests
      */
     @AfterEach
     public void cleanup(){

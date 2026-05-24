@@ -17,7 +17,8 @@ public class CreateATableTest {
     private CreateATable createATable = new CreateATable();
 
     /**
-     * The @AfterEach annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
+     * The @AfterEach annotation runs after every test so that way we drop the
+     * tables to avoid conflicts in future tests
      */
     @AfterEach
     public void afterEach(){
@@ -32,7 +33,8 @@ public class CreateATableTest {
     }   
 
     /**
-     * To test that the table exists, we are attempting to insert a row into the table and if table does not exist,
+     * To test that the table exists, we are attempting to insert a row into the
+     * table and if table does not exist,
      * the test will fail.
      */
     @Test

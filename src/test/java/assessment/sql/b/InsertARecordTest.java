@@ -16,7 +16,8 @@ public class InsertARecordTest {
     private InsertARecord insertARecord = new InsertARecord();
 
     /**
-     * The @AfterEach annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
+     * The @AfterEach annotation runs after every test so that way we drop the
+     * tables to avoid conflicts in future tests
      */
     @BeforeEach
     public void beforeEach(){
@@ -32,7 +33,8 @@ public class InsertARecordTest {
     }
 
     /**
-     * The after annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
+     * The after annotation runs after every test so that way we drop the tables
+     * to avoid conflicts in future tests
      */
     @AfterEach
     public void afterEach(){
@@ -47,8 +49,11 @@ public class InsertARecordTest {
     }
 
     /**
-     * DML statements return the number of rows affected. The problem1 method will return true if the number of rows affected is greater than 0 and false if it's 0.
-     * If the test returns true then the insert statement was successful and if it is false then it was unsuccessful.
+     * DML statements return the number of rows affected. The problem1 method
+     * will return true if the number of rows affected is greater than 0 and
+     * false if it's 0.
+     * If the test returns true then the insert statement was successful and if
+     * it is false then it was unsuccessful.
      */
     @Test
     public void addSongTest(){

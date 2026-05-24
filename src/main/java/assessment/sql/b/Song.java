@@ -4,7 +4,8 @@ package assessment.sql.b;
 import java.util.Objects;
 
 /**
- * This class is to represent one song record that is in the database table "songs"
+ * This class is to represent one song record that is in the database table
+ * "songs"
  */
 public class Song {
    private String title;

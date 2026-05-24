@@ -17,7 +17,8 @@ public class CreateTableWithPKTest {
     private CreateTableWithPK createTableWithPK = new CreateTableWithPK();
 
     /**
-     * The @AfterEach annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
+     * The @AfterEach annotation runs after every test so that way we drop the
+     * tables to avoid conflicts in future tests
      */
     @AfterEach
     public void afterEach(){
@@ -31,7 +32,8 @@ public class CreateTableWithPKTest {
         }
     }
     /**
-     * To test that the table exists, we are attempting to insert a row into the table and if table does not exist, the test will fail.
+     * To test that the table exists, we are attempting to insert a row into the
+     * table and if table does not exist, the test will fail.
      */
     @Test
     public void createTableSurrogateKeyTest(){
@@ -41,7 +43,9 @@ public class CreateTableWithPKTest {
 
             Connection connection = ConnectionUtil.getConnection();
 
-            //Notice that we are NOT manually adding a number for the primary key here. The db will do this for us because of the "SERIAL" datatype that we used.
+            //Notice that we are NOT manually adding a number for the primary
+            //key here. The db will do this for us because of the "SERIAL"
+            //datatype that we used.
             String sql = "INSERT into song (id, Title, Artist) VALUES (1,'Let it Be', 'Beatles')";
 
             PreparedStatement ps = connection.prepareStatement(sql);
@@ -68,7 +72,9 @@ public class CreateTableWithPKTest {
 
             Connection connection = ConnectionUtil.getConnection();
 
-            //Notice that we are NOT manually adding a number for the primary key here. The db will do this for us because of the "SERIAL" datatype that we used.
+            //Notice that we are NOT manually adding a number for the primary
+            //key here. The db will do this for us because of the "SERIAL"
+            //datatype that we used.
             String sql = "INSERT into song (id, Title, Artist) VALUES (1,'Let it Be', 'Beatles');";
             String sql2 = "INSERT into song (id, Title, Artist) VALUES (1,'Imagine', 'Beatles');";
 
@@ -92,7 +98,8 @@ public class CreateTableWithPKTest {
 
 
     /**
-     * The @AfterEach annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
+     * The @AfterEach annotation runs after every test so that way we drop the
+     * tables to avoid conflicts in future tests
      */
     @AfterEach
     public void cleanup(){

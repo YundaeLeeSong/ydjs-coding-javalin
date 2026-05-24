@@ -19,7 +19,7 @@ When contributing to this project, adhere to the following rules:
 
 4. **Code Documentation (Javadoc)**:
    - Include full problem descriptions.
-   - **Line Width**: Max **80 characters**.
+   - **Line Width**: Max **80 characters** strictly for Javadoc text (Java source code has no strict line limit; avoid awkward indentation).
    - **Character Set**: **ASCII characters only**.
    - **Formatting**: Clear indentation/alignment for tables, lists, and examples.
 
@@ -30,3 +30,12 @@ When contributing to this project, adhere to the following rules:
 
 6. **Maven Configuration (`pom.xml`)**:
    - Keep minimal. Remove unused or commented-out dependencies/plugins.
+
+7. **SQL Questions Migration Pattern**:
+   - For folders containing SQL challenges (like `sql_questions/`), split them into 1:1 mapped subpackages (e.g., `assessment.sql.a`, `b`, `c`, etc.) grouped appropriately.
+   - Place Main Java entry points in `src/main/java/assessment/sql/[group]/`.
+   - Place Test Java files in `src/test/java/assessment/sql/[group]/`.
+   - `.sql` solutions must be moved to `src/main/resources/assessment/sql/[group]/` with naming conventions like `[topic]_problem1.sql`.
+   - SQL setup/reset scripts used for testing must be moved to `src/test/resources/assessment/sql/[group]/` with naming conventions like `[topic]_setup.sql` and `[topic]_reset.sql`.
+   - Convert old `.md` instructional readmes directly into Javadocs within the main Java class.
+   - When loading SQL files, use `javaz.util.FileManager.parseSqlFile("src/.../file.sql")`.

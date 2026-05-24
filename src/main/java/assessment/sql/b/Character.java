@@ -4,7 +4,8 @@ package assessment.sql.b;
 import java.util.Objects;
 
 /**
- * This class defines a Character object. Objects of this class represent one row of a database table. The table
+ * This class defines a Character object. Objects of this class represent one
+ * row of a database table. The table
  * should be defined as follows to be compatible with these objects:
  *
  * CREATE TABLE character (

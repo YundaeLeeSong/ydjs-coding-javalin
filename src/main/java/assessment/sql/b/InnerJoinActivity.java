@@ -10,24 +10,31 @@ import java.util.Set;
 /**
  * SQL sublanguage: DQL (Data Query Language)
  *
- * Sometimes we want to query results from multiple tables. We can achieve this by doing a JOIN to include data from other
+ * Sometimes we want to query results from multiple tables. We can achieve this
+ * by doing a JOIN to include data from other
  * tables. We start with SELECT FROM left_table, and we can JOIN right_table.
  *
- * There are several types of joins. We will be looking at INNER JOIN here. INNER JOIN is when we query two or more
- * tables on some criteria, and only see results where there are matching rows in all tables.
+ * There are several types of joins. We will be looking at INNER JOIN here.
+ * INNER JOIN is when we query two or more
+ * tables on some criteria, and only see results where there are matching rows
+ * in all tables.
  *
  * Example: SELECT * FROM table_left INNER JOIN table_right
  * ON table_left.column1 = table_right.column3;
  *
- * You can add more functionality to this SQL query, for instance, you can also filter within this query.
+ * You can add more functionality to this SQL query, for instance, you can also
+ * filter within this query.
  *
  * Example: SELECT * FROM table_left INNER JOIN table_right
  * ON table_left.column1 = table_right.column3
  * WHERE table_left.column1 = value;
  *
- * Note: The text added to a simple select statement includes INNER, JOIN, and ON keywords. We join one table to another
- * based on some condition that matches rows from both tables together. In the above example we are matching rows
- * from table_left which have the same value in column 1 as those in table_right column 3.
+ * Note: The text added to a simple select statement includes INNER, JOIN, and
+ * ON keywords. We join one table to another
+ * based on some condition that matches rows from both tables together. In the
+ * above example we are matching rows
+ * from table_left which have the same value in column 1 as those in table_right
+ * column 3.
  *
  * Consider the following tables:
  *
@@ -41,7 +48,8 @@ import java.util.Set;
  *                                        |5   |'Robert Riggle'    |'Physics'  |
  *                                        |6   |'Jessica Williams' |'Art'      |
  *
- * We can query these tables with an INNER JOIN ON the "class" column in each table:
+ * We can query these tables with an INNER JOIN ON the "class" column in each
+ * table:
  *      SELECT * FROM class
  *      INNER JOIN student ON class.class_title = student.class_title;
  *
@@ -55,8 +63,10 @@ import java.util.Set;
  *  |3     |'Mr. McCarthy'   |'Writing'   |1     |'John Stewart'       |'Writing' |
  *  |3     |'Mr. McCarthy'   |'Writing'   |4     |'Aasif Mandvi'       |'Writing' |
  *
- * NOTE: Both teacher Ms. Goodall and student Jessica Williams would not be included in the
- * results. This is because there is no matching record in the opposite table for either of those records. (There is
+ * NOTE: Both teacher Ms. Goodall and student Jessica Williams would not be
+ * included in the
+ * results. This is because there is no matching record in the opposite table
+ * for either of those records. (There is
  * no art teacher, and there are no students taking biology.)
  */
 public class InnerJoinActivity {
@@ -77,21 +87,28 @@ public class InnerJoinActivity {
 
     public Set<Pair<Integer, String>> problem1() {
         /**
-         * Problem 1: Write a query that will return the id, and name of each of Ms. Lovelace's students. Notice that
-         * Ms. Lovelace teaches two classes, but which classes she teaches aren't known from the data in the student
-         * table. This means that you will need a way to combine the data from the two tables (inner join).
+         * Problem 1: Write a query that will return the id, and name of each of
+         * Ms. Lovelace's students. Notice that
+         * Ms. Lovelace teaches two classes, but which classes she teaches
+         * aren't known from the data in the student
+         * table. This means that you will need a way to combine the data from
+         * the two tables (inner join).
          *
-         * NOTE: You will need to simultaneously filter those results from the JOIN with a WHERE clause for the
+         * NOTE: You will need to simultaneously filter those results from the
+         * JOIN with a WHERE clause for the
          * Teacher name. For instance:
          * SELECT * FROM table_left INNER JOIN table_right
          * ON table_left.column1 = table_right.column3
          * WHERE table_left.column1 = value;
          *
          *
-         * Note: There should not be a wild card (*) in your statement. You will need to specify the column in your
-         * statement by writing table.column, because the column names may be ambiguous between class and student.
+         * Note: There should not be a wild card (*) in your statement. You will
+         * need to specify the column in your
+         * statement by writing table.column, because the column names may be
+         * ambiguous between class and student.
          *
-         * NOTE: Please write the SQL statement on a single line (do not use multi-line formatting).
+         * NOTE: Please write the SQL statement on a single line (do not use
+         * multi-line formatting).
          *
          */
         String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/b/innerjoin_problem1.sql").get(0);

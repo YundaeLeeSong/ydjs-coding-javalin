@@ -18,7 +18,8 @@ public class UpdateARecordTest {
     UpdateARecord updateARecord = new UpdateARecord();
 
     /**
-     * In this test we are querying everything in the users table to ensure that Alexa was successfully updated to "Rush".
+     * In this test we are querying everything in the users table to ensure that
+     * Alexa was successfully updated to "Rush".
      */
     @Test
     public void problem1Test(){
@@ -63,7 +64,8 @@ public class UpdateARecordTest {
     }
 
     /**
-     * The @BeforeEach annotation runs before every test so that way we create the tables required prior to running the test
+     * The @BeforeEach annotation runs before every test so that way we create
+     * the tables required prior to running the test
      */
     @BeforeEach
     public void beforeTest(){
@@ -76,7 +78,8 @@ public class UpdateARecordTest {
     }
 
     /**
-     * The @AfterEach annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
+     * The @AfterEach annotation runs after every test so that way we drop the
+     * tables to avoid conflicts in future tests
      */
     @AfterEach
     public void cleanup(){
