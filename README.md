@@ -4,34 +4,29 @@
 
 When contributing to this project, adhere to the following rules:
 
-1. **Package and Directory Structure**:
-   - Maintain a consistent Maven directory structure (`src/main/java`, `src/test/java`, `src/main/resources`).
+1. **Package & Directory Structure**:
+   - Follow standard Maven layout (`src/main/java`, `src/test/java`, `src/main/resources`).
    - Group related assessments by package (e.g., `assessment.java`, `assessment.sql`).
-   - SQL solutions should reside in `src/main/resources/assessment/sql/` with a corresponding Java entry point in `src/main/java/assessment/sql/` indicating the SQL file's path.
+   - SQL solutions: `.sql` files in `src/main/resources/...`, with a Java entry point in `src/main/java/...` pointing to the SQL file.
 
 2. **Test File Organization**:
-   - **Rule of 1:1 Mapping**: Each assessment file (`.java` in main) must correspond to exactly one test file (`.java` in test). Do not use single monolithic test classes for multiple independent challenges.
+   - **1:1 Mapping**: Each implementation file needs exactly one test file. Avoid monolithic test classes.
 
 3. **Database Test Setup & Teardown**:
-   - **No Hardcoded SQL**: Never use hardcoded string literals in test files for SQL setup (e.g., `CREATE TABLE`, `INSERT`) or teardown (e.g., `DROP TABLE`).
-   - Use `javaz.util.FileManager` to load and parse dedicated `.sql` script files from `src/test/resources/...` when preparing database states for testing.
-   - Look at the following directories to understand how to setup database,
-     - `src/main/java/assessment/sql/s/`
-     - `src/main/resources/assessment/sql/s/`
-     - `src/test/java/assessment/sql/s/`
-     - `src/test/resources/assessment/sql/s/`
+   - **No Hardcoded SQL**: Never use string literals for SQL setup/teardown in tests.
+   - Use `javaz.util.FileManager` to load `.sql` scripts from `src/test/resources/...`.
+   - Reference `assessment/sql/s/` directories for examples.
 
 4. **Code Documentation (Javadoc)**:
-   - Include the full problem description in the Javadoc block of the implementation file.
-   - **Line Width**: Word wrap all Javadoc text to a maximum of **80 characters** width.
-   - **Character Set**: Use **ASCII characters only**. No fancy quotes, special dashes, or unique bullet points.
-   - **Formatting**: Ensure clear indentation and alignment, particularly for tables, input/output examples, and lists.
+   - Include full problem descriptions.
+   - **Line Width**: Max **80 characters**.
+   - **Character Set**: **ASCII characters only**.
+   - **Formatting**: Clear indentation/alignment for tables, lists, and examples.
 
 5. **Continuous Integration (GitHub Actions)**:
-   - Use a matrix strategy in the test workflow to run tests by package, not recursively (`**`).
-   - Example matrix packages: `"assessment.java.*"`, `"assessment.sql.*"`, ...
-   - This ensures each package's tests run in their own isolated thread for optimal performance.
+   - Use a matrix strategy to test packages independently in parallel.
+   - Matrix entries must end with `*Test` to be detected by Maven Surefire (e.g., `"assessment.java.*Test"`).
+   - Use `-DfailIfNoTests=false` to avoid failing the build on empty packages.
 
 6. **Maven Configuration (`pom.xml`)**:
-   - Keep the `pom.xml` as simple and minimal as possible.
-   - Do not leave commented-out dependencies or unused plugins in the configuration.
+   - Keep minimal. Remove unused or commented-out dependencies/plugins.
