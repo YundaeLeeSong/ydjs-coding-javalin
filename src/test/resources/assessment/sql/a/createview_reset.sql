@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS site_user CASCADE;
+DROP VIEW IF EXISTS firstname_lastname CASCADE;

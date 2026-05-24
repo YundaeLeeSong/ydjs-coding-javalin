@@ -424,15 +424,13 @@ goto :EOF
 
 @REM ---------------------------------------------------------------------------
 @REM Function: Install-App
-@REM Usage: call :Install-App "<winget_ID>" "<Application_Name>" "<Executable_Command>" "<Program_Files_Folder_Name>" [SKIP_VERIFY]
+@REM Usage: call :Install-App "<winget_ID>" "<Application_Name>" "<Executable_Command>" "<Program_Files_Folder_Name>"
 @REM
 @REM Parameters:
 @REM   %1: The winget ID (e.g., "Git.Git").
 @REM   %2: A descriptive name for the application (e.g., "Git").
 @REM   %3: The executable command to check (e.g., "git").
 @REM   %4: The folder name to check for in Program Files (e.g., "Git").
-@REM   %5: Optional. If "SKIP_VERIFY", version verification (-version/--version/-v) is skipped.
-@REM       Use for apps that do not support these flags (e.g. AutoHotkey).
 @REM
 @REM Purpose:
 @REM   This function checks if an application is installed via winget and,
@@ -445,7 +443,6 @@ set APP_ID=%~1
 set APP_NAME=%~2
 set APP_CMD=%~3
 set PROGRAM_FOLDER=%~4
-set SKIP_VERIFY=%~5
 
 echo.
 echo.
@@ -494,10 +491,6 @@ if !ERRORLEVEL! EQU 0 (
 )
 
 :end_install_app
-@REM Skip version verification for apps that don't support -version/--version/-v (e.g. AutoHotkey)
-if /I "!SKIP_VERIFY!"=="SKIP_VERIFY" (
-  goto :end_install_app_done
-)
 "!APP_CMD!" -version >nul 2>&1
 if !ERRORLEVEL! EQU 0 (
   echo.!GREEN!Verifying !APP_NAME! installation...!RESET!
@@ -517,7 +510,6 @@ if !ERRORLEVEL! EQU 0 (
   "!APP_CMD!" -v
 )
 
-:end_install_app_done
 endlocal
 goto :EOF
 
@@ -691,7 +683,7 @@ if "%IS_ADMIN%"=="0" (
   echo.%CYAN%The script is running with %GREEN%administrator%RESET% privileges.%RESET%
   echo.%CYAN%=========================================================%RESET%
   echo.
-  call :Display-Virtualization-Info
+  @REM call :Display-Virtualization-Info
 )
 
 echo.%CYAN%========================================================= Utilities, Install...%RESET%
@@ -701,20 +693,20 @@ pause
 @REM ---------------------------------------------------------------------------
 call :Install-App "Mozilla.Firefox" "Firefox" "firefox" "Mozilla Firefox"
 call :Install-App "Google.Chrome" "Google Chrome" "chrome" "Google\Chrome"
-call :Install-App "Google.GoogleDrive" "Google Drive for Desktop" "GoogleDriveFS" "Google\Drive File Stream"
+@REM call :Install-App "Google.GoogleDrive" "Google Drive for Desktop" "GoogleDriveFS" "Google\Drive File Stream"
 @REM Here, 1. look up Google\Drive File Stream directory, if there is found, start (open) the directory. If not found, just skip.
 @REM 2. Also check if G drive exists. Only open the directory if folder is found AND G drive does not exist.
-call :Find-Directory "Google\Drive File Stream"
-if %FOUND_DIR% EQU 1 (
-  if not exist "G:\" (
-    echo.%CYAN%Opening Google Drive File Stream directory...%RESET%
-    echo.Found at: "%FOUND_DIR_PATH%"
-    echo.%GREEN%Google Drive File Stream directory opened successfully.%RESET%
-    start "" "%FOUND_DIR_PATH%"
-  ) else (
-    echo.%YELLOW%G drive already exists. Skipping directory open.%RESET%
-  )
-)
+@REM call :Find-Directory "Google\Drive File Stream"
+@REM if %FOUND_DIR% EQU 1 (
+@REM   if not exist "G:\" (
+@REM     echo.%CYAN%Opening Google Drive File Stream directory...%RESET%
+@REM     echo.Found at: "%FOUND_DIR_PATH%"
+@REM     echo.%GREEN%Google Drive File Stream directory opened successfully.%RESET%
+@REM     start "" "%FOUND_DIR_PATH%"
+@REM   ) else (
+@REM     echo.%YELLOW%G drive already exists. Skipping directory open.%RESET%
+@REM   )
+@REM )
 call :Install-App "Microsoft.VisualStudioCode" "Visual Studio Code" "code" "Microsoft VS Code"
 call :Install-App "Adobe.Acrobat.Reader.64-bit" "Adobe Acrobat Reader DC" "acrordc.exe" "Adobe"
 
@@ -737,7 +729,7 @@ call :Check-Bashrc
 @REM  3. GNU toolchains (GCC, make, autotools)
 @REM  4. Build Windows-native on virtual Linux environment
 @REM ---------------------------------------------------------------------------
-call :Install-App "MSYS2.MSYS2" "MSYS2" "mintty" "msys64"
+@REM call :Install-App "MSYS2.MSYS2" "MSYS2" "mintty" "msys64"
 @REM ---------------------------------------------------------------------------
 @REM Platform Independent - Container Platform (Docker Desktop)
 @REM  1. Container runtime and orchestration
@@ -745,8 +737,8 @@ call :Install-App "MSYS2.MSYS2" "MSYS2" "mintty" "msys64"
 @REM  3. GUI for managing images and containers
 @REM  4. Build Linux-native (WSL2 processor) on virtual Linux environment
 @REM ---------------------------------------------------------------------------
-call :Install-App "Microsoft.WSL" "Windows Subsystem for Linux" "wsl" "WSL"
-call :Install-App "Docker.DockerDesktop" "Docker Desktop" "docker" "Docker"
+@REM call :Install-App "Microsoft.WSL" "Windows Subsystem for Linux" "wsl" "WSL"
+@REM call :Install-App "Docker.DockerDesktop" "Docker Desktop" "docker" "Docker"
 
 echo.%CYAN%========================================================= Windows Natives Dev, Install...%RESET%
 pause
@@ -760,32 +752,7 @@ call :Duplicate-Make
 call :Install-App "MinGW.MinGW" "Make (MinGW)" "make" "MinGW"
 call :Install-App "Kitware.CMake" "CMake" "cmake" "CMake"
 call :Install-App "NSIS.NSIS" "NSIS (Installer Creator)" "makensis" "NSIS"
-echo.
-echo.%YELLOW%To use NSIS from any command prompt, add the following directory to your system PATH:%RESET%
-echo.%CYAN%C:\Program Files (x86)\NSIS\Bin%RESET%
-
 call :Install-App "MiKTeX.MiKTeX" "MiKTeX" "pdflatex" "MiKTeX"
-
-
-@REM ---------------------------------------------------------------------------
-@REM Platform Dependents - Windows native scripting tools
-@REM ---------------------------------------------------------------------------
-call :Install-App "AutoHotkey.AutoHotkey" "AutoHotkey" "AutoHotkey" "AutoHotkey" "SKIP_VERIFY"
-echo.
-echo.%YELLOW%To use AutoHotkey from any command prompt, add the following directory to your system PATH:%RESET%
-echo.%CYAN%C:\Program Files\AutoHotkey\v2%RESET%
-
-@REM ---------------------------------------------------------------------------
-@REM Platform Independent - Python native tools
-@REM ---------------------------------------------------------------------------
-call :Install-App "astral-sh.uv" "uv" "uv" "uv"
-
-
-
-
-@REM -----------------------------
-@REM winget search <ID>
-@REM -----------------------------
 
 echo.
 echo.%GREEN%All specified applications have been processed.%RESET%

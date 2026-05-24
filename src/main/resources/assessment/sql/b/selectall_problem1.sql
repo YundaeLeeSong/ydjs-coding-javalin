@@ -1,0 +1,1 @@
+SELECT title, artist FROM song;

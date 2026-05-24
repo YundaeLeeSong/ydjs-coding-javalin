@@ -1,0 +1,42 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      # The matrix allows you to define multiple variations of a job. 
+      # GitHub will run a separate parallel job (thread) for each item in the matrix array.
+      matrix:
+        test_package: 
+          - "assessment.java.*"
+          - "assessment.sql.a.*"
+          - "assessment.sql.b.*"
+          - "assessment.sql.c.*"
+          - "assessment.sql.s.*"
+          - "veeva.java.a.*"
+          - "veeva.sql.a.*"
+      # fail-fast: false ensures that if one job fails, the other parallel jobs will continue to run
+      fail-fast: false
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up JDK 11
+      uses: actions/setup-java@v4
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: maven
+        
+    - name: Build and test with Maven
+      # Passes the current matrix group into the Maven test command using the -Dtest argument
+      run: mvn -B test -Dtest=${{ matrix.test_package }} --file pom.xml

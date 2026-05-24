@@ -1,0 +1,2 @@
+CREATE TABLE song (id SERIAL PRIMARY KEY,artist VARCHAR(255),album VARCHAR(255),song VARCHAR(255));
+INSERT INTO song (artist, album, song) VALUES('The Beatles', 'Abbey Road', 'Come Together'),('The Beatles', 'Let It Be', 'Let It Be' ),('Led Zeppelin', 'IV', 'Black Dog'),('Led Zeppelin', 'Physical Graffiti', 'Kashmir' ),('Led Zeppelin', 'IV', 'Going to California' ),('The Eagles', 'Hotel California', 'Hotel California');

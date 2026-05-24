@@ -1,72 +1,37 @@
-# Polyglot Coding Challenges & Algorithms
+# Project Conventions & Actions Log
 
-This repository serves as a comparative study of programming languages and paradigms. It implements the same set of coding challenges and algorithmic problems across multiple languages to demonstrate syntax differences, standard conventions, and testing frameworks.
+## Project Rules & Guidelines
 
-## Project Overview
+When contributing to this project, adhere to the following rules:
 
-The core intention of this project is to provide a Rosetta Stone-like experience for developers, allowing them to see how identical logic is expressed and tested in:
+1. **Package and Directory Structure**:
+   - Maintain a consistent Maven directory structure (`src/main/java`, `src/test/java`, `src/main/resources`).
+   - Group related assessments by package (e.g., `assessment.java`, `assessment.sql`).
+   - SQL solutions should reside in `src/main/resources/assessment/sql/` with a corresponding Java entry point in `src/main/java/assessment/sql/` indicating the SQL file's path.
 
-*   **Java** (OpenJDK 17+)
-*   **Kotlin** (JVM)
-*   **Python** (3.x)
-*   **JavaScript** (Node.js)
+2. **Test File Organization**:
+   - **Rule of 1:1 Mapping**: Each assessment file (`.java` in main) must correspond to exactly one test file (`.java` in test). Do not use single monolithic test classes for multiple independent challenges.
 
-## Repository Structure
+3. **Database Test Setup & Teardown**:
+   - **No Hardcoded SQL**: Never use hardcoded string literals in test files for SQL setup (e.g., `CREATE TABLE`, `INSERT`) or teardown (e.g., `DROP TABLE`).
+   - Use `javaz.util.FileManager` to load and parse dedicated `.sql` script files from `src/test/resources/...` when preparing database states for testing.
+   - Look at the following directories to understand how to setup database,
+     - `src/main/java/assessment/sql/s/`
+     - `src/main/resources/assessment/sql/s/`
+     - `src/test/java/assessment/sql/s/`
+     - `src/test/resources/assessment/sql/s/`
 
-### Core Challenges (Root Directory)
-The root directory contains the `APQuiz` series (levels 00-10), which are sets of logic puzzles and algorithmic tasks.
-*   **Java:** `APQuizXX.java` (Implementation) & `APQuizXXTest.java` (JUnit Tests)
-*   **Kotlin:** `APQuizXX.kt` (Implementation)
-*   **Python:** `ap_quiz_packageXX.py` (Implementation & Unittest)
-*   **JavaScript:** `ap-quiz-XX.js` (Implementation) & `ap-quiz-XX.test.js` (Jest Tests)
+4. **Code Documentation (Javadoc)**:
+   - Include the full problem description in the Javadoc block of the implementation file.
+   - **Line Width**: Word wrap all Javadoc text to a maximum of **80 characters** width.
+   - **Character Set**: Use **ASCII characters only**. No fancy quotes, special dashes, or unique bullet points.
+   - **Formatting**: Ensure clear indentation and alignment, particularly for tables, input/output examples, and lists.
 
-### Paradigm-Specific Modules
-*   **`base02-coding-pop_algo`**: Focuses on **Procedural Oriented Programming** and fundamental algorithms (Recursion, Sorting, Searching).
-*   **`base03-coding-oop`**: Focuses on **Object-Oriented Programming**, including class structures and GUI applications (JavaFX).
-*   **`base04-coding-fop`**: Focuses on **Functional Oriented Programming** concepts.
+5. **Continuous Integration (GitHub Actions)**:
+   - Use a matrix strategy in the test workflow to run tests by package, not recursively (`**`).
+   - Example matrix packages: `"assessment.java.*"`, `"assessment.sql.*"`, ...
+   - This ensures each package's tests run in their own isolated thread for optimal performance.
 
-## Getting Started & Testing
-
-### 1. JavaScript (Node.js & Jest)
-*   **Prerequisites:** Node.js and npm installed.
-*   **Setup:**
-    ```bash
-    npm install
-    ```
-*   **Run Tests:**
-    ```bash
-    npm test
-    # Or specific file
-    npx jest ap-quiz-00.test.js
-    ```
-
-### 2. Python (Unittest)
-*   **Prerequisites:** Python 3.x.
-*   **Run Tests:**
-    Each package file contains its own tests.
-    ```bash
-    python ap_quiz_package00.py
-    ```
-
-### 3. Java & Kotlin (JUnit 5)
-*   **Prerequisites:** JDK and Kotlin compiler.
-*   **Setup:** Ensure `junit-1.9.3.jar` (or compatible standalone runner) is present.
-*   **Compile & Run (Java Example):**
-    ```bash
-    # Create output directory
-    mkdir out
-    
-    # Compile
-    javac -d out -cp junit-1.9.3.jar APQuiz00.java APQuiz00Test.java
-    
-    # Run Tests
-    java -jar junit-1.9.3.jar --class-path out --scan-classpath
-    ```
-*   **Compile & Run (Kotlin Example):**
-    ```bash
-    kotlinc APQuiz00.kt -include-runtime -d out
-    # (Requires adding Kotlin runtime to classpath when running tests)
-    ```
-
-## Contribution
-Feel free to add implementations for missing languages (e.g., C++, Go, Rust) following the existing naming conventions (`ap-quiz-XX`) and ensuring 100% test coverage.
+6. **Maven Configuration (`pom.xml`)**:
+   - Keep the `pom.xml` as simple and minimal as possible.
+   - Do not leave commented-out dependencies or unused plugins in the configuration.
