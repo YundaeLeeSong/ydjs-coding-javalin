@@ -17,7 +17,6 @@ jobs:
       # GitHub will run a separate parallel job (thread) for each item in the matrix array.
       matrix:
         test_package: 
-          - "assessment.java.*Test"
           - "assessment.java.a.*Test"
           - "assessment.java.b.*Test"
           - "assessment.java.c.*Test"
@@ -29,6 +28,7 @@ jobs:
           - "assessment.java.i.*Test"
           - "assessment.java.j.*Test"
           - "assessment.java.k.*Test"
+          - "assessment.java.l.*Test"
           - "assessment.sql.a.*Test"
           - "assessment.sql.b.*Test"
           - "assessment.sql.c.*Test"

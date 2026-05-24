@@ -14,10 +14,19 @@ public class LongestConsecutiveTest {
     public void testLongestConsecutive() {
         assertEquals(0, LongestConsecutive.longestConsecutive(new int[]{}));
         assertEquals(1, LongestConsecutive.longestConsecutive(new int[]{42}));
-        assertEquals(4, LongestConsecutive.longestConsecutive(new int[]{1, 2, 3, 4}));
-        assertEquals(4, LongestConsecutive.longestConsecutive(new int[]{100, 4, 200, 1, 3, 2}));
-        assertEquals(5, LongestConsecutive.longestConsecutive(new int[]{0, -1, 1, 2, -2, 5}));
-        assertEquals(3, LongestConsecutive.longestConsecutive(new int[]{1, 1, 2, 2, 3, 3}));
-        assertEquals(3, LongestConsecutive.longestConsecutive(new int[]{10, 5, 6, 7, 100}));
+        assertEquals(4, 
+            LongestConsecutive.longestConsecutive(new int[]{1, 2, 3, 4}));
+        assertEquals(4, 
+            LongestConsecutive.longestConsecutive(
+                new int[]{100, 4, 200, 1, 3, 2}));
+        assertEquals(5, 
+            LongestConsecutive.longestConsecutive(
+                new int[]{0, -1, 1, 2, -2, 5}));
+        assertEquals(3, 
+            LongestConsecutive.longestConsecutive(
+                new int[]{1, 1, 2, 2, 3, 3}));
+        assertEquals(3, 
+            LongestConsecutive.longestConsecutive(
+                new int[]{10, 5, 6, 7, 100}));
     }
 }

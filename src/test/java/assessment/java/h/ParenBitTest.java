@@ -22,7 +22,8 @@ public class ParenBitTest {
         assertEquals("(x)", ParenBit.parenBit("(x)"));
         assertEquals("()", ParenBit.parenBit("()"));
         assertEquals("(ipsa)", ParenBit.parenBit("res (ipsa) loquitor"));
-        assertEquals("(not really)", ParenBit.parenBit("hello(not really)there"));
+        assertEquals("(not really)", 
+            ParenBit.parenBit("hello(not really)there"));
         assertEquals("(ab)", ParenBit.parenBit("ab(ab)ab"));
     }
 }

@@ -17,6 +17,7 @@ public class StringCleanTest {
         assertEquals("Helo", StringClean.stringClean("Hello"));
         assertEquals("XabcY", StringClean.stringClean("XXabcYY"));
         assertEquals("12ab45", StringClean.stringClean("112ab445"));
-        assertEquals("Helo Bokeper", StringClean.stringClean("Hello Bookkeeper"));
+        assertEquals("Helo Bokeper", 
+            StringClean.stringClean("Hello Bookkeeper"));
     }
 }

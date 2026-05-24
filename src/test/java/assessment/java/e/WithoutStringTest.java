@@ -12,14 +12,22 @@ public class WithoutStringTest {
      */
     @Test
     public void testWithoutString() {
-        assertEquals("He there", WithoutString.withoutString("Hello there", "llo"));
-        assertEquals("Hllo thr", WithoutString.withoutString("Hello there", "e"));
-        assertEquals("Hello there", WithoutString.withoutString("Hello there", "x"));
-        assertEquals("Th  a FH", WithoutString.withoutString("This is a FISH", "IS"));
-        assertEquals("TH  a FH", WithoutString.withoutString("THIS is a FISH", "is"));
-        assertEquals("abab", WithoutString.withoutString("abxxxxab", "xx"));
-        assertEquals("abxab", WithoutString.withoutString("abxxxab", "xx"));
-        assertEquals("abab", WithoutString.withoutString("abxxxab", "x"));
+        assertEquals("He there", WithoutString.withoutString(
+            "Hello there", "llo"));
+        assertEquals("Hllo thr", WithoutString.withoutString(
+            "Hello there", "e"));
+        assertEquals("Hello there", WithoutString.withoutString(
+            "Hello there", "x"));
+        assertEquals("Th  a FH", WithoutString.withoutString(
+            "This is a FISH", "IS"));
+        assertEquals("TH  a FH", WithoutString.withoutString(
+            "THIS is a FISH", "is"));
+        assertEquals("abab", WithoutString.withoutString(
+            "abxxxxab", "xx"));
+        assertEquals("abxab", WithoutString.withoutString(
+            "abxxxab", "xx"));
+        assertEquals("abab", WithoutString.withoutString(
+            "abxxxab", "x"));
         assertEquals("", WithoutString.withoutString("xxx", "x"));
         assertEquals("x", WithoutString.withoutString("xxx", "xx"));
         assertEquals("xzz", WithoutString.withoutString("xyzzy", "Y"));

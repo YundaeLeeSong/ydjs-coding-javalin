@@ -15,7 +15,8 @@ public class GetSandwichTest {
         assertEquals("jam", GetSandwich.getSandwich("breadjambread"));
         assertEquals("jam", GetSandwich.getSandwich("xxbreadjambreadyy"));
         assertEquals("", GetSandwich.getSandwich("xxbreadyy"));
-        assertEquals("breadjam", GetSandwich.getSandwich("xxbreadbreadjambreadyy"));
+        assertEquals("breadjam", 
+            GetSandwich.getSandwich("xxbreadbreadjambreadyy"));
         assertEquals("A", GetSandwich.getSandwich("breadAbread"));
         assertEquals("", GetSandwich.getSandwich("breadbread"));
         assertEquals("", GetSandwich.getSandwich("abcbreaz"));
@@ -23,6 +24,7 @@ public class GetSandwichTest {
         assertEquals("", GetSandwich.getSandwich(""));
         assertEquals("breax", GetSandwich.getSandwich("breadbreaxbread"));
         assertEquals("y", GetSandwich.getSandwich("breaxbreadybread"));
-        assertEquals("breadbread", GetSandwich.getSandwich("breadbreadbreadbread"));
+        assertEquals("breadbread", 
+            GetSandwich.getSandwich("breadbreadbreadbread"));
     }
 }

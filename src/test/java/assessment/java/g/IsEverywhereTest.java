@@ -22,11 +22,16 @@ public class IsEverywhereTest {
         assertFalse(IsEverywhere.isEverywhere(new int[]{3, 1}, 2));
         assertTrue(IsEverywhere.isEverywhere(new int[]{3}, 1));
         assertTrue(IsEverywhere.isEverywhere(new int[]{}, 1));
-        assertTrue(IsEverywhere.isEverywhere(new int[]{1, 2, 1, 2, 3, 2, 5}, 2));
-        assertFalse(IsEverywhere.isEverywhere(new int[]{1, 2, 1, 1, 1, 2}, 2));
-        assertFalse(IsEverywhere.isEverywhere(new int[]{2, 1, 2, 1, 1, 2}, 2));
-        assertFalse(IsEverywhere.isEverywhere(new int[]{2, 1, 2, 2, 2, 1, 1, 2}, 2));
-        assertTrue(IsEverywhere.isEverywhere(new int[]{2, 1, 2, 2, 2, 1, 2, 1}, 2));
+        assertTrue(IsEverywhere.isEverywhere(
+            new int[]{1, 2, 1, 2, 3, 2, 5}, 2));
+        assertFalse(IsEverywhere.isEverywhere(
+            new int[]{1, 2, 1, 1, 1, 2}, 2));
+        assertFalse(IsEverywhere.isEverywhere(
+            new int[]{2, 1, 2, 1, 1, 2}, 2));
+        assertFalse(IsEverywhere.isEverywhere(
+            new int[]{2, 1, 2, 2, 2, 1, 1, 2}, 2));
+        assertTrue(IsEverywhere.isEverywhere(
+            new int[]{2, 1, 2, 2, 2, 1, 2, 1}, 2));
         assertTrue(IsEverywhere.isEverywhere(new int[]{2, 1, 2, 1, 2}, 2));
     }
 }

@@ -13,7 +13,8 @@ public class SeriesUpTest {
     @Test
     public void testSeriesUp() {
         assertArrayEquals(new int[]{1, 1, 2, 1, 2, 3}, SeriesUp.seriesUp(3));
-        assertArrayEquals(new int[]{1, 1, 2, 1, 2, 3, 1, 2, 3, 4}, SeriesUp.seriesUp(4));
+        assertArrayEquals(new int[]{1, 1, 2, 1, 2, 3, 1, 2, 3, 4}, 
+            SeriesUp.seriesUp(4));
         assertArrayEquals(new int[]{1, 1, 2}, SeriesUp.seriesUp(2));
         assertArrayEquals(new int[]{1}, SeriesUp.seriesUp(1));
         assertArrayEquals(new int[]{}, SeriesUp.seriesUp(0));
