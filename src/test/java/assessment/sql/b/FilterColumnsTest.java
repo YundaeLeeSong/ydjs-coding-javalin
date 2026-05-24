@@ -17,7 +17,8 @@ public class FilterColumnsTest {
     FilterColumns filterColumns = new FilterColumns();
 
     /**
-     * This test compares the result of the problem1 method to the hardcoded values below which ensures that only the
+     * This test compares the result of the problem1 method to the hardcoded
+     * values below which ensures that only the
      * firstname column is retrieved.
      */
     @Test
@@ -43,7 +44,8 @@ public class FilterColumnsTest {
     }
 
     /**
-     * The @BeforeEach annotation runs before every test so that way we create the tables required prior to running the test
+     * The @BeforeEach annotation runs before every test so that way we create
+     * the tables required prior to running the test
      */
     @BeforeEach
     public void beforeTest(){
@@ -56,7 +58,8 @@ public class FilterColumnsTest {
     }
 
     /**
-     * The @AfterEach annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
+     * The @AfterEach annotation runs after every test so that way we drop the
+     * tables to avoid conflicts in future tests
      */
     @AfterEach
     public void cleanup(){

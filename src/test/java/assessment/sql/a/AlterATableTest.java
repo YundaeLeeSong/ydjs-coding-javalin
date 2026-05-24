@@ -34,7 +34,8 @@ public class AlterATableTest {
         }
     }
     /**
-     * The @BeforeEach annotation runs before every test so that way we create the tables required prior to running the test
+     * The @BeforeEach annotation runs before every test so that way we create
+     * the tables required prior to running the test
      */
     @BeforeEach
     public void beforeTest(){
@@ -47,7 +48,8 @@ public class AlterATableTest {
     }
 
     /**
-     * The @AfterEach annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
+     * The @AfterEach annotation runs after every test so that way we drop the
+     * tables to avoid conflicts in future tests
      */
     @AfterEach
     public void cleanup(){

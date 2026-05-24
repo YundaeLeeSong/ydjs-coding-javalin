@@ -9,25 +9,34 @@ import java.sql.*;
 /**
  * SQL sublanguage: DQL (Data Query Language)
  *
- * Aggregate functions in SQL are functions which preform operations on multiple rows to produce a single output.
- * For instance, COUNT() is an aggregate function. Count will return the number of rows of data in the result set.
+ * Aggregate functions in SQL are functions which preform operations on multiple
+ * rows to produce a single output.
+ * For instance, COUNT() is an aggregate function. Count will return the number
+ * of rows of data in the result set.
  * So if we query a table with 12 rows using a statement like this:
  *     SELECT COUNT(*) FROM table_name;
  * We should get the value 12
  *
- * Aggregate functions "aggregate" data, combining and changing it into some output based on the input. Regardless of
- * how large that input is, the output will always be a single value. If we repeated the above query but the table had
+ * Aggregate functions "aggregate" data, combining and changing it into some
+ * output based on the input. Regardless of
+ * how large that input is, the output will always be a single value. If we
+ * repeated the above query but the table had
  * 10,000 rows, the result would still be a single value: 10,000.
  *
- * There are many aggregate functions built into SQL, some commonly used ones include:
- * - SUM() - outputs the sum of the values in a single column from the result set
- * - AVG() - outputs the average (mean) value of the values in a single column from the result set
- * - MIN() - outputs the least value among the values in a single column from the result set
+ * There are many aggregate functions built into SQL, some commonly used ones
+ * include:
+ * - SUM() - outputs the sum of the values in a single column from the result
+ * set
+ * - AVG() - outputs the average (mean) value of the values in a single column
+ * from the result set
+ * - MIN() - outputs the least value among the values in a single column from
+ * the result set
  * - MAX() - similar to MIN but outputs the greatest value
  * - FIRST() - outputs the first value found in a column of the result set
  * - LAST() - outputs the last value found in a column of the result set
  *
- * Example: You might use the SUM() function to find the total of all employee salaries:
+ * Example: You might use the SUM() function to find the total of all employee
+ * salaries:
  *      SELECT SUM(salary) FROM employee;
  */
 public class AggregateFunctionsActivity {
@@ -45,8 +54,11 @@ public class AggregateFunctionsActivity {
 
     public double problem1() {
         /**
-         * Problem 1: use the SUM() aggregate function to output the total of all salaries found in the table.
-         * NOTE: Do not change anything in this code. You should write your sql statement on a single line (do not use multi-line formatting) in the problem1.sql file.
+         * Problem 1: use the SUM() aggregate function to output the total of
+         * all salaries found in the table.
+         * NOTE: Do not change anything in this code. You should write your sql
+         * statement on a single line (do not use multi-line formatting) in the
+         * problem1.sql file.
          * Note: the output should not contain any other info but the sum.
          */
         String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/a/aggregatefunctions_problem1.sql").get(0);
@@ -69,8 +81,11 @@ public class AggregateFunctionsActivity {
 
     public int problem2() {
         /**
-         * Problem 2: use the COUNT() aggregate function to output the number of employees with the last name "Smith".
-         * NOTE: Do not change anything in this code. You should write your sql statement on a single line (do not use multi-line formatting) in the problem2.sql file.
+         * Problem 2: use the COUNT() aggregate function to output the number of
+         * employees with the last name "Smith".
+         * NOTE: Do not change anything in this code. You should write your sql
+         * statement on a single line (do not use multi-line formatting) in the
+         * problem2.sql file.
          * Note: the output should not contain any other info but the count.
          */
         String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/a/aggregatefunctions_problem2.sql").get(0);
@@ -95,8 +110,11 @@ public class AggregateFunctionsActivity {
 
     public double problem3() {
         /**
-         * Problem 3: use the MIN() aggregate function to return the lowest salary.
-         * NOTE: Do not change anything in this code. You should write your sql statement on a single line (do not use multi-line formatting) in the problem3.sql file.
+         * Problem 3: use the MIN() aggregate function to return the lowest
+         * salary.
+         * NOTE: Do not change anything in this code. You should write your sql
+         * statement on a single line (do not use multi-line formatting) in the
+         * problem3.sql file.
          * Note: the output should not contain any other info but the salary.
          */
         String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/a/aggregatefunctions_problem3.sql").get(0);
@@ -120,8 +138,11 @@ public class AggregateFunctionsActivity {
 
     public double problem4() {
         /**
-         * Problem 4: use the MAX() aggregate function to return the highest salary.
-         * NOTE: Do not change anything in this code. You should write your sql statement on a single line (do not use multi-line formatting) in the problem4.sql file.
+         * Problem 4: use the MAX() aggregate function to return the highest
+         * salary.
+         * NOTE: Do not change anything in this code. You should write your sql
+         * statement on a single line (do not use multi-line formatting) in the
+         * problem4.sql file.
          * Note: the output should not contain any other info but the salary.
          */
         String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/a/aggregatefunctions_problem4.sql").get(0);

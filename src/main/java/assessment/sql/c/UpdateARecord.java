@@ -11,12 +11,16 @@ import java.sql.Statement;
 /**
  * SQL sublanguage: DML (Data Manipulation Language)
  *
- * Now that we know how to insert and remove records from a table, we are going to learn how to update a record.
+ * Now that we know how to insert and remove records from a table, we are going
+ * to learn how to update a record.
  *
- * To update a record we utilize the UPDATE keyword. The syntax for updating a record is as follows:
- * UPDATE table_name SET col_1 = val_1, col_2 = val_2, ...col_N = val_N WHERE condition;
+ * To update a record we utilize the UPDATE keyword. The syntax for updating a
+ * record is as follows:
+ * UPDATE table_name SET col_1 = val_1, col_2 = val_2, ...col_N = val_N WHERE
+ * condition;
  *
- * NOTE: The WHERE condition is important because if you leave this out, that column will be updated throughout all the records in the table.
+ * NOTE: The WHERE condition is important because if you leave this out, that
+ * column will be updated throughout all the records in the table.
  */
 public class UpdateARecord {
 
@@ -34,9 +38,11 @@ public class UpdateARecord {
 
     public void problem1(){
         /**
-         * Problem 1: Update Alexa's last name to be 'Rush' in the site_user table.
+         * Problem 1: Update Alexa's last name to be 'Rush' in the site_user
+         * table.
          *
-         * NOTE: Please write the SQL statement on a single line (do not use multi-line formatting).
+         * NOTE: Please write the SQL statement on a single line (do not use
+         * multi-line formatting).
          *
          */
         String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/c/update_problem1.sql").get(0);

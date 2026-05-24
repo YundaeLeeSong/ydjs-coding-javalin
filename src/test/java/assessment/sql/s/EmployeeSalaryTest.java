@@ -29,7 +29,8 @@ public class EmployeeSalaryTest {
 
     @AfterEach
     public void teardown() throws Exception {
-        // Do not close connection since it's a singleton without a re-init mechanism.
+        // Do not close connection since it's a singleton without a re-init
+        // mechanism.
         // We just clear the tables so it's fresh for next run.
         if (conn != null) {
             Statement stmt = conn.createStatement();

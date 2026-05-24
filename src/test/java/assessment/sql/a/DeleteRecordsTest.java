@@ -18,7 +18,8 @@ public class DeleteRecordsTest {
     DeleteRecords deleteRecords = new DeleteRecords();
 
     /**
-     * In this test we are retrieving everything in the users table to ensure that Steve was successfully
+     * In this test we are retrieving everything in the users table to ensure
+     * that Steve was successfully
      * removed and comparing it to the hardcoded values below.
      */
     @Test
@@ -59,7 +60,8 @@ public class DeleteRecordsTest {
     }
 
     /**
-     * The @BeforeEach annotation runs before every test so that way we create the tables required prior to running the test
+     * The @BeforeEach annotation runs before every test so that way we create
+     * the tables required prior to running the test
      */
     @BeforeEach
     public void beforeEach(){
@@ -72,7 +74,8 @@ public class DeleteRecordsTest {
     }
 
     /**
-     * The @AfterEach annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
+     * The @AfterEach annotation runs after every test so that way we drop the
+     * tables to avoid conflicts in future tests
      */
     @AfterEach
     public void afterEach(){

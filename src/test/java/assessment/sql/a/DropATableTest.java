@@ -15,7 +15,8 @@ public class DropATableTest {
     private DropATable dropATable = new DropATable();
 
     /**
-     * The before annotation runs before every test so that way we drop the tables to avoid conflicts in future tests
+     * The before annotation runs before every test so that way we drop the
+     * tables to avoid conflicts in future tests
      */
     @BeforeEach
     public void beforeTest(){
@@ -28,7 +29,8 @@ public class DropATableTest {
     }
 
     /**
-     * The after annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
+     * The after annotation runs after every test so that way we drop the tables
+     * to avoid conflicts in future tests
      */
     @AfterEach
     public void afterEach(){
@@ -43,8 +45,10 @@ public class DropATableTest {
     }
 
     /**
-     *  In programming we utilize try / catch constructs to catch when there are potential for errors / exceptions.
-     *  For this test, if I am able to insert a song into the songs table, then the songs table was never dropped and the test should fail.
+     * In programming we utilize try / catch constructs to catch when there are
+     * potential for errors / exceptions.
+     * For this test, if I am able to insert a song into the songs table, then
+     * the songs table was never dropped and the test should fail.
      */
     @Test
     public void dropTableTest(){

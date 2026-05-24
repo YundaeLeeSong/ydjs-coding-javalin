@@ -12,11 +12,13 @@ import java.sql.Statement;
 /**
  * SQL sublanguage: DDL (Data Definition Language)
  *
- * We know how to create tables but, we don't know how to relate tables to one another. This is a crucial part of relational databases.
+ * We know how to create tables but, we don't know how to relate tables to one
+ * another. This is a crucial part of relational databases.
  *
  * We can relate tables together by utilizing foreign keys.
  *
- * A foreign key is a column in one table that refers to the primary key in another table.
+ * A foreign key is a column in one table that refers to the primary key in
+ * another table.
  *
  * For example lets say we have the "artist" table below:
  *      artist table:
@@ -35,7 +37,8 @@ import java.sql.Statement;
  *      |3         |'Kashmir'               |
  *
  *
- * Currently, the song table has no reference to the artist that made the song. To make that reference we are going to want to use a foreign key.
+ * Currently, the song table has no reference to the artist that made the song.
+ * To make that reference we are going to want to use a foreign key.
  * The songs table with a foreign key would look like the table below
  *
  *      song table with fk:
@@ -47,7 +50,8 @@ import java.sql.Statement;
  *
  * The "artist_fk" column would reference the primary key of the "artist" table.
  *
- * If we try to input an "artist_fk" that isn't in the artist table, an exception will be thrown.
+ * If we try to input an "artist_fk" that isn't in the artist table, an
+ * exception will be thrown.
  *
  * the syntax for creating the songs table with an artist fk is as follows:
  * CREATE TABLE song (
@@ -57,10 +61,12 @@ import java.sql.Statement;
  * );
  *
  *
- * notice the constraint we add to the artist_fk. We are referencing the id column in the artist table.
+ * notice the constraint we add to the artist_fk. We are referencing the id
+ * column in the artist table.
  * This is how we create a foreign key.
  *
- * NOTE: Other flavors of SQL might have different syntax for this however for our labs, this is the syntax we will utilize
+ * NOTE: Other flavors of SQL might have different syntax for this however for
+ * our labs, this is the syntax we will utilize
  */
 public class CreateTableWithForeignKey {
 
@@ -81,12 +87,16 @@ public class CreateTableWithForeignKey {
          *       post table:
          *       |   id  |     post        |        user_fk         |
          *       ----------------------------------------------------
-         *       where the id is of type SERIAL PRIMARY KEY, post is of type varchar(255), and user_fk is of type
+         * where the id is of type SERIAL PRIMARY KEY, post is of type
+         * varchar(255), and user_fk is of type
          *       int.
          *
-         * NOTE: Do not change anything in this code. You should write your sql statement on a single line (do not use multi-line formatting) in the problem1.sql file.
+         * NOTE: Do not change anything in this code. You should write your sql
+         * statement on a single line (do not use multi-line formatting) in the
+         * problem1.sql file.
          *
-         * Note: The post column will hold the text content of the post and the user_fk column will be a foreign key to
+         * Note: The post column will hold the text content of the post and the
+         * user_fk column will be a foreign key to
          * the site_user table's id column.
          */
         String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/a/foreignkey_problem1.sql").get(0);

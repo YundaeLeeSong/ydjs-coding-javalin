@@ -18,7 +18,8 @@ public class GetAllSongsTest {
     GetAllSongs getAllSongs = new GetAllSongs();
 
     /**
-     * The @BeforeEach annotation runs before every test so that way we create the tables required prior to running the test
+     * The @BeforeEach annotation runs before every test so that way we create
+     * the tables required prior to running the test
      */
     @BeforeEach
     public void beforeTest(){
@@ -31,7 +32,8 @@ public class GetAllSongsTest {
     }
 
     /**
-     * The @AfterEach annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
+     * The @AfterEach annotation runs after every test so that way we drop the
+     * tables to avoid conflicts in future tests
      */
     @AfterEach
     public void cleanup(){
@@ -48,7 +50,9 @@ public class GetAllSongsTest {
 
     /**
      * In this test we have a hardcoded version of that same list in java.
-     * This test calls the method with the SQL syntax that you wrote and then compares it to the hardcoded list here, if they are the same then the test passes.
+     * This test calls the method with the SQL syntax that you wrote and then
+     * compares it to the hardcoded list here, if they are the same then the
+     * test passes.
      */
     @Test
     public void getAllSongsTest(){

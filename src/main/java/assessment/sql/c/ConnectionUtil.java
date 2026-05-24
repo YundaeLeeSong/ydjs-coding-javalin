@@ -7,7 +7,8 @@ import org.h2.jdbcx.JdbcDataSource;
 
 /**
  * The ConnectionUtil class will be utilized to create an active connection to
- * our database.  We will be utilizing an in-memory called h2database for the sql demos.
+ * our database.  We will be utilizing an in-memory called h2database for the
+ * sql demos.
  * 
  * DO NOT CHANGE ANYTHING IN THIS CLASS
  */
@@ -28,7 +29,8 @@ public class ConnectionUtil {
 	private static String password = "sa";
 
 	/**
-	 * DataSource for pooling. Pooling enables the creation of multiple connections when connections are closed.
+	 * DataSource for pooling. Pooling enables the creation of multiple connections
+	 * when connections are closed.
 	 */
 	private static JdbcDataSource pool = new JdbcDataSource();
 

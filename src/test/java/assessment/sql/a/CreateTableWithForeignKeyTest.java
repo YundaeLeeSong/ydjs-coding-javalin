@@ -16,7 +16,9 @@ public class CreateTableWithForeignKeyTest {
     CreateTableWithForeignKey createTableWithForeignKey = new CreateTableWithForeignKey();
 
     /**
-     * This test calls the method with the SQL syntax that you wrote and then we are retrieving everything in the users table to ensure that Alexa was successfully updated.
+     * This test calls the method with the SQL syntax that you wrote and then we
+     * are retrieving everything in the users table to ensure that Alexa was
+     * successfully updated.
      */
     @Test
     public void problem1Test(){
@@ -50,7 +52,8 @@ public class CreateTableWithForeignKeyTest {
     }
 
     /**
-     * This test checks if you can input a fk that doesn't exist in the users table.
+     * This test checks if you can input a fk that doesn't exist in the users
+     * table.
      */
     @Test
     public void problem1TestRefIntegrity(){
@@ -77,7 +80,8 @@ public class CreateTableWithForeignKeyTest {
             String sql = "INSERT INTO post (post, user_fk) VALUES ('test post123', 100)";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate();
-            //if executing the query doesn't throw an exception, then the test should fail.
+            //if executing the query doesn't throw an exception, then the test
+            //should fail.
             System.out.println("problem1: foreign key constraint not added. \n");
             Assertions.fail();
         } catch (SQLException e) {
@@ -105,7 +109,8 @@ public class CreateTableWithForeignKeyTest {
 
 
     /**
-     * The @BeforeEach annotation runs before every test so that way we create the tables required prior to running the test
+     * The @BeforeEach annotation runs before every test so that way we create
+     * the tables required prior to running the test
      */
     @BeforeEach
     public void beforeTest(){
@@ -118,7 +123,8 @@ public class CreateTableWithForeignKeyTest {
     }
 
     /**
-     * The @AfterEach annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
+     * The @AfterEach annotation runs after every test so that way we drop the
+     * tables to avoid conflicts in future tests
      */
     @AfterEach
     public void afterEach(){
