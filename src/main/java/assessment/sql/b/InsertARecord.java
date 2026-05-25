@@ -43,7 +43,7 @@ public class InsertARecord {
      * problem1.sql file.
      */
     public boolean problem1(){
-//        write your SQL logic in a single line in the problem1.sql file.
+        // write your SQL logic in a single line in the problem1.sql file.
         String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/b/insert_problem1.sql").get(0);
         try {
             Connection connection = ConnectionUtil.getConnection();
