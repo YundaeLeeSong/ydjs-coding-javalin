@@ -3,6 +3,8 @@ package javaz.io;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -17,6 +19,36 @@ public class FileManagerTest {
 
     private final String testFileName = "execution-point-test.txt";
     private final Path testFilePath = Paths.get(testFileName);
+
+    @BeforeAll
+    public static void setUpAll() throws IOException {
+        // Files in the execution point (project root)
+        Files.writeString(Paths.get("local-config.txt"), "THIS IS A LOCAL CONFIG FILE AT THE EXECUTION POINT");
+        Files.writeString(Paths.get("override-test.txt"), "CONTEXT FROM EXECUTION POINT (OVERRIDE)");
+
+        // Files in the classpath (target directories are used instead of src/ to be immediately available at runtime)
+        Path classesDir = Paths.get("target/classes");
+        Files.createDirectories(classesDir);
+        Files.writeString(classesDir.resolve("main-resource.txt"), "THIS IS A PRODUCTION RESOURCE");
+        Files.writeString(classesDir.resolve("override-test.txt"), "PRODUCTION_VERSION");
+
+        Path testClassesDir = Paths.get("target/test-classes");
+        Files.createDirectories(testClassesDir);
+        Files.writeString(testClassesDir.resolve("override-test.txt"), "TEST_VERSION (OVERRIDE)");
+        Files.writeString(testClassesDir.resolve("test-resource.txt"), "THIS IS A TEST RESOURCE");
+    }
+
+    @AfterAll
+    public static void tearDownAll() throws IOException {
+        Files.deleteIfExists(Paths.get("local-config.txt"));
+        Files.deleteIfExists(Paths.get("override-test.txt"));
+        
+        Files.deleteIfExists(Paths.get("target/classes/main-resource.txt"));
+        Files.deleteIfExists(Paths.get("target/classes/override-test.txt"));
+        
+        Files.deleteIfExists(Paths.get("target/test-classes/override-test.txt"));
+        Files.deleteIfExists(Paths.get("target/test-classes/test-resource.txt"));
+    }
 
     @BeforeEach
     public void setUp() throws IOException {
