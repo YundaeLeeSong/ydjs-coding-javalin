@@ -8,6 +8,7 @@ When contributing to this project, adhere to the following rules:
    - Follow standard Maven layout (`src/main/java`, `src/test/java`, `src/main/resources`).
    - Group related assessments by package (e.g., `assessment.java`, `assessment.sql`).
    - SQL solutions: `.sql` files in `src/main/resources/...`, with a Java entry point in `src/main/java/...` pointing to the SQL file.
+   - **Practice Packages**: Coding challenges migrated from `java_questions` are grouped into subpackages under `practice`. Each subpackage is limited to 7 or fewer standalone coding challenges to prevent bloating. If there are any dependent models or classes (e.g., for OOP challenges), they should be grouped together within a single subpackage; the specific subpackage name does not matter.
 
 2. **Test File Organization**:
    - **1:1 Mapping**: Each implementation file needs exactly one test file. Avoid monolithic test classes.
@@ -31,11 +32,11 @@ When contributing to this project, adhere to the following rules:
 6. **Maven Configuration (`pom.xml`)**:
    - Keep minimal. Remove unused or commented-out dependencies/plugins.
 
-7. **SQL Questions Migration Pattern**:
-   - For folders containing SQL challenges (like `sql_questions/`), split them into 1:1 mapped subpackages (e.g., `assessment.sql.a`, `b`, `c`, etc.) grouped appropriately.
-   - Place Main Java entry points in `src/main/java/assessment/sql/[group]/`.
-   - Place Test Java files in `src/test/java/assessment/sql/[group]/`.
-   - `.sql` solutions must be moved to `src/main/resources/assessment/sql/[group]/` with naming conventions like `[topic]_problem1.sql`.
-   - SQL setup/reset scripts used for testing must be moved to `src/test/resources/assessment/sql/[group]/` with naming conventions like `[topic]_setup.sql` and `[topic]_reset.sql`.
+7. **Coding Challenge Questions Migration Pattern**:
+   - For folders containing coding challenges (like `sql_questions/`), split them into 1:1 mapped subpackages (e.g., `assessment.sql.a`, `b`, `c`, etc.) grouped appropriately.
+   - Place Main Java entry points, for example, in `src/main/java/assessment/sql/[group]/`.
+   - Place Test Java files, for example, in `src/test/java/assessment/sql/[group]/`.
+   - `.sql` solutions must be moved to `src/main/resources/assessment/sql/[group]/`.
+   - If required like SQL, setup/reset scripts used for testing must be moved to `src/test/resources/assessment/sql/[group]/` with naming conventions like `[topic]_setup.sql` and `[topic]_reset.sql`.
    - Convert old `.md` instructional readmes directly into Javadocs within the main Java class.
-   - When loading SQL files, use `javaz.io.FileManager.parseSqlFile("assessment/sql/a/file.sql")`.
+   - If loading SQL files, use `javaz.io.FileManager.parseSqlFile("assessment/sql/a/file.sql")`.
