@@ -27,3 +27,5 @@ public class SplitArrayTest {
         assertTrue(SplitArray.splitArray(new int[]{1, 2, 3, 10, 10, 1, 1}));
     }
 }
+
+

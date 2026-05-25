@@ -1,12 +1,10 @@
 package assessment.sql.a;
 
 
-import javaz.util.ConnectionUtil;
+import javaz.io.FileManager;
 import org.junit.jupiter.api.*;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,7 +30,7 @@ public class GroupByTest {
     public static void getConnection() {
         try {
             java.sql.Connection conn = javaz.util.ConnectionUtil.getConnection();
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/a/groupby_reset.sql")) { conn.prepareStatement(statement).executeUpdate(); } for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/a/groupby_setup.sql")) { conn.prepareStatement(statement).executeUpdate(); }
+            for (String statement : FileManager.parseSqlFile("assessment/sql/a/groupby_reset.sql")) { conn.prepareStatement(statement).executeUpdate(); } for (String statement : FileManager.parseSqlFile("assessment/sql/a/groupby_setup.sql")) { conn.prepareStatement(statement).executeUpdate(); }
         } catch(Exception e) {
             e.printStackTrace();
         }
@@ -43,7 +41,7 @@ public class GroupByTest {
     public void setup() {
         try {
             java.sql.Connection conn = javaz.util.ConnectionUtil.getConnection();
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/a/groupby_reset.sql")) { conn.prepareStatement(statement).executeUpdate(); } for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/a/groupby_setup.sql")) { conn.prepareStatement(statement).executeUpdate(); }
+            for (String statement : FileManager.parseSqlFile("assessment/sql/a/groupby_reset.sql")) { conn.prepareStatement(statement).executeUpdate(); } for (String statement : FileManager.parseSqlFile("assessment/sql/a/groupby_setup.sql")) { conn.prepareStatement(statement).executeUpdate(); }
         } catch(Exception e) {
             e.printStackTrace();
         }
@@ -53,7 +51,7 @@ public class GroupByTest {
     public void cleanup() {
         try {
             java.sql.Connection conn = javaz.util.ConnectionUtil.getConnection();
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/a/groupby_reset.sql")) {
+            for (String statement : FileManager.parseSqlFile("assessment/sql/a/groupby_reset.sql")) {
                 conn.prepareStatement(statement).executeUpdate();
             }
         } catch(Exception e) {
@@ -65,7 +63,7 @@ public class GroupByTest {
     public static void closeConnection() {
         try {
             java.sql.Connection conn = javaz.util.ConnectionUtil.getConnection();
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/a/groupby_reset.sql")) {
+            for (String statement : FileManager.parseSqlFile("assessment/sql/a/groupby_reset.sql")) {
                 conn.prepareStatement(statement).executeUpdate();
             }
         } catch(Exception e) {
@@ -73,3 +71,5 @@ public class GroupByTest {
         }
     }
 }
+
+

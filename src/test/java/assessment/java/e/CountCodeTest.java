@@ -28,3 +28,5 @@ public class CountCodeTest {
         assertEquals(3, CountCode.countCode("coAcodeBcoleccoreDD"));
     }
 }
+
+

@@ -32,3 +32,5 @@ public class StarOutTest {
         assertEquals("", StarOut.starOut(""));
     }
 }
+
+

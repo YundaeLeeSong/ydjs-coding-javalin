@@ -29,3 +29,5 @@ public class Only14Test {
         assertTrue(Only14.only14(new int[]{4, 1, 4, 1}));
     }
 }
+
+

@@ -1,8 +1,8 @@
 package assessment.sql.b;
 
 
+import javaz.io.FileManager;
 import javaz.util.ConnectionUtil;
-import javaz.util.FileManager;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -42,7 +42,7 @@ public class GetAllSongs {
      */
     public List<Song> problem1(){
 //        write your SQL logic in a single line in the problem1.sql file.
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/b/selectall_problem1.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/b/selectall_problem1.sql").get(0);
 
 
         List<Song> songs = new ArrayList<>();
@@ -61,3 +61,5 @@ public class GetAllSongs {
         return songs;
     }
 }
+
+

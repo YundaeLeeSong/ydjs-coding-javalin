@@ -1,15 +1,11 @@
 package assessment.sql.b;
 
 
-import javaz.util.ConnectionUtil;
+import javaz.io.FileManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 public class InsertARecordTest {
 
@@ -23,10 +19,10 @@ public class InsertARecordTest {
     public void beforeEach(){
         try {
             java.sql.Connection conn = javaz.util.ConnectionUtil.getConnection();
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/b/insert_reset.sql")) {
+            for (String statement : FileManager.parseSqlFile("assessment/sql/b/insert_reset.sql")) {
                 conn.prepareStatement(statement).executeUpdate();
             }
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/b/insert_reset.sql")) { conn.prepareStatement(statement).executeUpdate(); } for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/b/insert_setup.sql")) { conn.prepareStatement(statement).executeUpdate(); }
+            for (String statement : FileManager.parseSqlFile("assessment/sql/b/insert_reset.sql")) { conn.prepareStatement(statement).executeUpdate(); } for (String statement : FileManager.parseSqlFile("assessment/sql/b/insert_setup.sql")) { conn.prepareStatement(statement).executeUpdate(); }
         } catch(Exception e) {
             e.printStackTrace();
         }
@@ -40,7 +36,7 @@ public class InsertARecordTest {
     public void afterEach(){
         try {
             java.sql.Connection conn = javaz.util.ConnectionUtil.getConnection();
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/b/insert_reset.sql")) {
+            for (String statement : FileManager.parseSqlFile("assessment/sql/b/insert_reset.sql")) {
                 conn.prepareStatement(statement).executeUpdate();
             }
         } catch(Exception e) {
@@ -60,3 +56,5 @@ public class InsertARecordTest {
         Assertions.assertTrue(insertARecord.problem1());
     }
 }
+
+

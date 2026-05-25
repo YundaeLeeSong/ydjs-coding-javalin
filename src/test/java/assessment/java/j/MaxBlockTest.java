@@ -25,3 +25,5 @@ public class MaxBlockTest {
         assertEquals(4, MaxBlock.maxBlock("XX2222BBBbbXX2222"));
     }
 }
+
+

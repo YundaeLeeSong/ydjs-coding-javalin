@@ -16,3 +16,5 @@ public class BunnyEars2Test {
         assertEquals(25, BunnyEars2.bunnyEars2(10));
     }
 }
+
+

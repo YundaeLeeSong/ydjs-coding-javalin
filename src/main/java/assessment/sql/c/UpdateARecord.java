@@ -2,7 +2,7 @@ package assessment.sql.c;
 
 
 import javaz.util.ConnectionUtil;
-import javaz.util.FileManager;
+import javaz.io.FileManager;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -45,7 +45,7 @@ public class UpdateARecord {
          * multi-line formatting).
          *
          */
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/c/update_problem1.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/c/update_problem1.sql").get(0);
 
         try {
             Connection connection = ConnectionUtil.getConnection();
@@ -57,3 +57,5 @@ public class UpdateARecord {
         }
     }
 }
+
+

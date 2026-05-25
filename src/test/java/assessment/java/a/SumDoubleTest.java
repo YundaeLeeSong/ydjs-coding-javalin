@@ -16,3 +16,5 @@ public class SumDoubleTest {
         assertEquals(7, SumDouble.sumDouble(3, 4));
     }
 }
+
+

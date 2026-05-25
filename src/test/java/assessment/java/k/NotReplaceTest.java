@@ -28,3 +28,5 @@ public class NotReplaceTest {
         assertEquals("AAAis is not", NotReplace.notReplace("AAAis is"));
     }
 }
+
+

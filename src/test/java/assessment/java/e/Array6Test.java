@@ -22,3 +22,5 @@ public class Array6Test {
         assertTrue(Array6.array6(new int[]{2, 5, 6}, 0));
     }
 }
+
+

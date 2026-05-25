@@ -22,3 +22,5 @@ public class Split53Test {
         assertTrue(Split53.split53(new int[]{3, 5, 6, 10, 3, 3}));
     }
 }
+
+

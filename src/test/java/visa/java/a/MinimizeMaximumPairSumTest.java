@@ -26,3 +26,5 @@ public class MinimizeMaximumPairSumTest {
         assertEquals(0, solver.minPairSum(new int[0]));
     }
 }
+
+

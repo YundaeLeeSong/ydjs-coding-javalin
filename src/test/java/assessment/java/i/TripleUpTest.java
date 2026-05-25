@@ -26,3 +26,5 @@ public class TripleUpTest {
         assertFalse(TripleUp.tripleUp(new int[]{2, 3, 5, 6, 8, 9, 2, 3}));
     }
 }
+
+

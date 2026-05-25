@@ -14,3 +14,5 @@ public class ScoresIncreasingTest {
         assertTrue(ScoresIncreasing.scoresIncreasing(new int[]{-5, 4, 11}));
     }
 }
+
+

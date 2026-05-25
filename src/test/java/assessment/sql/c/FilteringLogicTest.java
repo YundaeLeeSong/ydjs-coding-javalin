@@ -1,12 +1,10 @@
 package assessment.sql.c;
 
 
-import javaz.util.ConnectionUtil;
+import javaz.io.FileManager;
 import org.junit.jupiter.api.*;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -54,7 +52,7 @@ public class FilteringLogicTest {
     public static void beforeAll() {
         try {
             java.sql.Connection conn = javaz.util.ConnectionUtil.getConnection();
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/c/selectwhereandor_reset.sql")) { conn.prepareStatement(statement).executeUpdate(); } for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/c/selectwhereandor_setup.sql")) { conn.prepareStatement(statement).executeUpdate(); }
+            for (String statement : FileManager.parseSqlFile("assessment/sql/c/selectwhereandor_reset.sql")) { conn.prepareStatement(statement).executeUpdate(); } for (String statement : FileManager.parseSqlFile("assessment/sql/c/selectwhereandor_setup.sql")) { conn.prepareStatement(statement).executeUpdate(); }
         } catch(Exception e) {
             e.printStackTrace();
         }
@@ -64,7 +62,7 @@ public class FilteringLogicTest {
     public void beforeEach() {
         try {
             java.sql.Connection conn = javaz.util.ConnectionUtil.getConnection();
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/c/selectwhereandor_reset.sql")) { conn.prepareStatement(statement).executeUpdate(); } for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/c/selectwhereandor_setup.sql")) { conn.prepareStatement(statement).executeUpdate(); }
+            for (String statement : FileManager.parseSqlFile("assessment/sql/c/selectwhereandor_reset.sql")) { conn.prepareStatement(statement).executeUpdate(); } for (String statement : FileManager.parseSqlFile("assessment/sql/c/selectwhereandor_setup.sql")) { conn.prepareStatement(statement).executeUpdate(); }
         } catch(Exception e) {
             e.printStackTrace();
         }
@@ -74,7 +72,7 @@ public class FilteringLogicTest {
     public void afterEach() {
         try {
             java.sql.Connection conn = javaz.util.ConnectionUtil.getConnection();
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/c/selectwhereandor_reset.sql")) {
+            for (String statement : FileManager.parseSqlFile("assessment/sql/c/selectwhereandor_reset.sql")) {
                 conn.prepareStatement(statement).executeUpdate();
             }
         } catch(Exception e) {
@@ -86,7 +84,7 @@ public class FilteringLogicTest {
     public static void afterAll() {
         try {
             java.sql.Connection conn = javaz.util.ConnectionUtil.getConnection();
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/c/selectwhereandor_reset.sql")) {
+            for (String statement : FileManager.parseSqlFile("assessment/sql/c/selectwhereandor_reset.sql")) {
                 conn.prepareStatement(statement).executeUpdate();
             }
         } catch(Exception e) {
@@ -94,3 +92,5 @@ public class FilteringLogicTest {
         }
     }
 }
+
+

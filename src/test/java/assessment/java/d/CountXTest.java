@@ -22,3 +22,5 @@ public class CountXTest {
         assertEquals(0, CountX.countX("hiAAhi12hi"));
     }
 }
+
+

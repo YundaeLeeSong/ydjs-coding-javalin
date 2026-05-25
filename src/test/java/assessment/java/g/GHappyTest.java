@@ -26,3 +26,5 @@ public class GHappyTest {
         assertTrue(GHappy.gHappy("yyygggxyy"));
     }
 }
+
+

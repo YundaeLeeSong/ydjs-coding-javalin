@@ -1,8 +1,8 @@
 package assessment.sql.b;
 
 
+import javaz.io.FileManager;
 import javaz.util.ConnectionUtil;
-import javaz.util.FileManager;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -44,7 +44,7 @@ public class InsertARecord {
      */
     public boolean problem1(){
         // write your SQL logic in a single line in the problem1.sql file.
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/b/insert_problem1.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/b/insert_problem1.sql").get(0);
         try {
             Connection connection = ConnectionUtil.getConnection();
             Statement s = connection.createStatement();
@@ -57,4 +57,6 @@ public class InsertARecord {
         return false;
     }
 }
+
+
 

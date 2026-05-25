@@ -28,3 +28,5 @@ public class ShiftLeftTest {
             ShiftLeft.shiftLeft(new int[]{1, 2, 3}));
     }
 }
+
+

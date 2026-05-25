@@ -26,3 +26,5 @@ public class LuckySumTest {
         assertEquals(6, LuckySum.luckySum(3, 3, 13));
     }
 }
+
+

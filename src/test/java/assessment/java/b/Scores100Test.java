@@ -14,3 +14,5 @@ public class Scores100Test {
         assertFalse(Scores100.scores100(new int[]{1, 2, 100, 4, 5}));
     }
 }
+
+

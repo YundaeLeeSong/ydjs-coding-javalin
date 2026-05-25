@@ -24,3 +24,5 @@ public class FindBottomTwoElements {
         return new int[]{sortedArray[0], sortedArray[1]};
     }
 }
+
+

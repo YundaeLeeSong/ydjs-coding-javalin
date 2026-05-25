@@ -30,3 +30,5 @@ public class NoTeenSumTest {
         assertEquals(0, NoTeenSum.noTeenSum(17, 19, 18));
     }
 }
+
+

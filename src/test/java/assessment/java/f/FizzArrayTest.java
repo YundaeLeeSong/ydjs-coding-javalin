@@ -22,3 +22,5 @@ public class FizzArrayTest {
             FizzArray.fizzArray(7));
     }
 }
+
+

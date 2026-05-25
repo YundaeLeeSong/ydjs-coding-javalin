@@ -1,11 +1,10 @@
 package assessment.sql.a;
 
 
+import javaz.io.FileManager;
 import javaz.util.ConnectionUtil;
-import javaz.util.FileManager;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -78,7 +77,7 @@ public class CreateATable {
      */
     public void problem1(){
 //        write your SQL logic in a single line in the problem1.sql file.
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/a/createtable_problem1.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/a/createtable_problem1.sql").get(0);
 
         try {
             Connection connection = ConnectionUtil.getConnection();
@@ -90,3 +89,5 @@ public class CreateATable {
     }
 
 }
+
+

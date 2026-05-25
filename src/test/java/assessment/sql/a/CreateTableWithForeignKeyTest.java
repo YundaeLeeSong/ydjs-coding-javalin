@@ -1,5 +1,6 @@
 package assessment.sql.a;
 
+import javaz.io.FileManager;
 import javaz.util.ConnectionUtil;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -116,7 +117,7 @@ public class CreateTableWithForeignKeyTest {
     public void beforeTest(){
         try {
             java.sql.Connection conn = javaz.util.ConnectionUtil.getConnection();
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/a/foreignkey_reset.sql")) { conn.prepareStatement(statement).executeUpdate(); } for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/a/foreignkey_setup.sql")) { conn.prepareStatement(statement).executeUpdate(); }
+            for (String statement : FileManager.parseSqlFile("assessment/sql/a/foreignkey_reset.sql")) { conn.prepareStatement(statement).executeUpdate(); } for (String statement : FileManager.parseSqlFile("assessment/sql/a/foreignkey_setup.sql")) { conn.prepareStatement(statement).executeUpdate(); }
         } catch(Exception e) {
             e.printStackTrace();
         }
@@ -130,7 +131,7 @@ public class CreateTableWithForeignKeyTest {
     public void afterEach(){
         try {
             java.sql.Connection conn = javaz.util.ConnectionUtil.getConnection();
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/a/foreignkey_reset.sql")) {
+            for (String statement : FileManager.parseSqlFile("assessment/sql/a/foreignkey_reset.sql")) {
                 conn.prepareStatement(statement).executeUpdate();
             }
         } catch(Exception e) {
@@ -139,3 +140,5 @@ public class CreateTableWithForeignKeyTest {
     }
 
 }
+
+

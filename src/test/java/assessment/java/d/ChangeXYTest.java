@@ -24,3 +24,5 @@ public class ChangeXYTest {
         assertEquals("hihi", ChangeXY.changeXY("hihi"));
     }
 }
+
+

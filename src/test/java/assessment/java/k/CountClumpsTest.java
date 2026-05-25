@@ -27,3 +27,5 @@ public class CountClumpsTest {
         assertEquals(0, CountClumps.countClumps(new int[]{}));
     }
 }
+
+

@@ -23,3 +23,5 @@ public class Array11Test {
         assertEquals(2, Array11.array11(new int[]{11, 5, 11}, 0));
     }
 }
+
+

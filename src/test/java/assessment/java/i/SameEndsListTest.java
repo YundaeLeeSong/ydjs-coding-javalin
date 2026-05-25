@@ -42,3 +42,5 @@ public class SameEndsListTest {
             new int[]{4, 2, 4, 5}, 1));
     }
 }
+
+

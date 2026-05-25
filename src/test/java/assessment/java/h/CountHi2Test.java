@@ -30,3 +30,5 @@ public class CountHi2Test {
         assertEquals(1, CountHi2.countHi2("Hellohi"));
     }
 }
+
+

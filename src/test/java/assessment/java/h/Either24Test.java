@@ -28,3 +28,5 @@ public class Either24Test {
         assertFalse(Either24.either24(new int[]{}));
     }
 }
+
+

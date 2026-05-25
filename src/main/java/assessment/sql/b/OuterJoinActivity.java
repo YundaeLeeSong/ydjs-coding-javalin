@@ -1,8 +1,8 @@
 package assessment.sql.b;
 
 
+import javaz.io.FileManager;
 import javaz.util.ConnectionUtil;
-import javaz.util.FileManager;
 
 import java.sql.*;
 import java.util.HashSet;
@@ -106,7 +106,7 @@ public class OuterJoinActivity {
          * Hint: You should start with "SELECT * FROM class"
          */
 
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/b/outerjoin_problem1.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/b/outerjoin_problem1.sql").get(0);
 
 
 
@@ -138,7 +138,7 @@ public class OuterJoinActivity {
          * Hint: You should start with "SELECT * FROM class"
          */
 
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/b/outerjoin_problem2.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/b/outerjoin_problem2.sql").get(0);
 
 
 
@@ -158,3 +158,5 @@ public class OuterJoinActivity {
         return results;
     }
 }
+
+

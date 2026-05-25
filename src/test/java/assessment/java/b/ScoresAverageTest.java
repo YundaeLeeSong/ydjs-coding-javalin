@@ -17,3 +17,5 @@ public class ScoresAverageTest {
             new int[]{5, 4, 5, 6, 2, 1, 2, 3}));
     }
 }
+
+

@@ -19,5 +19,7 @@ package exam.sql.a;
  * Write an SQL query that returns the name and city of all employees in Reston.
  */
 public class EmployeeReston {
-    public static final String SQL_FILE_PATH = "src/main/resources/exam/sql/a/employee_reston.sql";
+    public static final String SQL_FILE_PATH = "exam/sql/a/employee_reston.sql";
 }
+
+

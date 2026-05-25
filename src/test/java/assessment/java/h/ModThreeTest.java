@@ -26,3 +26,5 @@ public class ModThreeTest {
         assertTrue(ModThree.modThree(new int[]{9, 7, 2, 9, 2, 2, 6}));
     }
 }
+
+

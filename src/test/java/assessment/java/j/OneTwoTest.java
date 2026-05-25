@@ -35,3 +35,5 @@ public class OneTwoTest {
             OneTwo.oneTwo(longInput.substring(0, longInput.length() - 2)));
     }
 }
+
+

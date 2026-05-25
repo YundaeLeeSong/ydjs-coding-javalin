@@ -43,3 +43,5 @@ public class MakeBricksTest {
         assertTrue(MakeBricks.makeBricks(20, 4, 39));
     }
 }
+
+

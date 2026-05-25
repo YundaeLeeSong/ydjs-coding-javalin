@@ -39,3 +39,5 @@ public class CircularArrayDefuseTest {
         assertArrayEquals(new int[0], solver.decrypt(new int[0], 3));
     }
 }
+
+

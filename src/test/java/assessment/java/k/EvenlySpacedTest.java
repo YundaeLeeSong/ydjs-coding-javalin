@@ -28,3 +28,5 @@ public class EvenlySpacedTest {
         assertFalse(EvenlySpaced.evenlySpaced(12, 3, 6));
     }
 }
+
+

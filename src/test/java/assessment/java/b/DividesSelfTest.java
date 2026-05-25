@@ -19,3 +19,5 @@ public class DividesSelfTest {
         assertTrue(DividesSelf.dividesSelf(162));
     }
 }
+
+

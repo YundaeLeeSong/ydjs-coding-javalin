@@ -24,3 +24,5 @@ public class EqualIsNotTest {
         assertFalse(EqualIsNot.equalIsNot("mis3notpotbotis"));
     }
 }
+
+

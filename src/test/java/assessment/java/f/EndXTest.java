@@ -26,3 +26,5 @@ public class EndXTest {
         assertEquals("hixxx", EndX.endX("xxhxi"));
     }
 }
+
+

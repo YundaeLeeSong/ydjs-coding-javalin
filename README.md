@@ -14,7 +14,7 @@ When contributing to this project, adhere to the following rules:
 
 3. **Database Test Setup & Teardown**:
    - **No Hardcoded SQL**: Never use string literals for SQL setup/teardown in tests.
-   - Use `javaz.util.FileManager` to load `.sql` scripts from `src/test/resources/...`.
+   - Use `javaz.io.FileManager` to load `.sql` scripts using classpath-relative paths (e.g., `assessment/sql/a/reset.sql`).
    - Reference `assessment/sql/s/` directories for examples.
 
 4. **Code Documentation (Javadoc)**:
@@ -38,4 +38,4 @@ When contributing to this project, adhere to the following rules:
    - `.sql` solutions must be moved to `src/main/resources/assessment/sql/[group]/` with naming conventions like `[topic]_problem1.sql`.
    - SQL setup/reset scripts used for testing must be moved to `src/test/resources/assessment/sql/[group]/` with naming conventions like `[topic]_setup.sql` and `[topic]_reset.sql`.
    - Convert old `.md` instructional readmes directly into Javadocs within the main Java class.
-   - When loading SQL files, use `javaz.util.FileManager.parseSqlFile("src/.../file.sql")`.
+   - When loading SQL files, use `javaz.io.FileManager.parseSqlFile("assessment/sql/a/file.sql")`.

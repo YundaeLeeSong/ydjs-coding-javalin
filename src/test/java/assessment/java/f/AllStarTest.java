@@ -22,3 +22,5 @@ public class AllStarTest {
         assertEquals("1*2*3*4", AllStar.allStar("1234"));
     }
 }
+
+

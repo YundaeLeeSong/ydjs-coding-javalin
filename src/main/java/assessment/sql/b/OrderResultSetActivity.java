@@ -2,7 +2,7 @@ package assessment.sql.b;
 
 
 import javaz.util.ConnectionUtil;
-import javaz.util.FileManager;
+import javaz.io.FileManager;
 
 import java.sql.*;
 import java.util.LinkedList;
@@ -59,7 +59,7 @@ public class OrderResultSetActivity {
          * problem1.sql file.
          *
          */
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/b/orderby_problem1.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/b/orderby_problem1.sql").get(0);
 
 
 
@@ -81,4 +81,6 @@ public class OrderResultSetActivity {
     }
 
 }
+
+
 

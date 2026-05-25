@@ -30,3 +30,5 @@ public class SquareUpTest {
         }, SquareUp.squareUp(6));
     }
 }
+
+

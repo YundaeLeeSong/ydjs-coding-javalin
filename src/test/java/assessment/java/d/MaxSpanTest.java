@@ -24,3 +24,5 @@ public class MaxSpanTest {
         assertEquals(1, MaxSpan.maxSpan(new int[]{1}));
     }
 }
+
+

@@ -39,3 +39,5 @@ public class MergeTest {
             Merge.merge(new int[]{-1, 1}, new int[]{-2, 0, 2}));
     }
 }
+
+

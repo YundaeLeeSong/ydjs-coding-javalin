@@ -1,8 +1,8 @@
 package assessment.sql.a;
 
 
+import javaz.io.FileManager;
 import javaz.util.ConnectionUtil;
-import javaz.util.FileManager;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -41,7 +41,7 @@ public class DeleteRecords {
      */
     public void problem1(){
 
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/a/delete_problem1.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/a/delete_problem1.sql").get(0);
 
         try {
             Connection connection = ConnectionUtil.getConnection();
@@ -53,3 +53,5 @@ public class DeleteRecords {
         }
     }
 }
+
+

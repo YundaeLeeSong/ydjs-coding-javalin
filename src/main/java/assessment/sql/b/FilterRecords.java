@@ -2,8 +2,8 @@ package assessment.sql.b;
 
 
 
+import javaz.io.FileManager;
 import javaz.util.ConnectionUtil;
-import javaz.util.FileManager;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -81,7 +81,7 @@ public class FilterRecords {
         /**
          *
          */
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/b/selectwhere_problem1.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/b/selectwhere_problem1.sql").get(0);
 
 
         List<User> users = new ArrayList<>();
@@ -119,7 +119,7 @@ public class FilterRecords {
      */
     public List<User> problem2(){
 
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/b/selectwhere_problem2.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/b/selectwhere_problem2.sql").get(0);
 
 
         List<User> users = new ArrayList<>();
@@ -140,3 +140,5 @@ public class FilterRecords {
     }
 
 }
+
+

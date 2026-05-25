@@ -17,3 +17,5 @@ public class ScoresClumpTest {
         assertFalse(ScoresClump.scoresClump(new int[]{4, 5, 8}));
     }
 }
+
+

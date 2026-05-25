@@ -34,3 +34,5 @@ public class Post4Test {
             Post4.post4(new int[]{3, 4, 3, 2}));
     }
 }
+
+

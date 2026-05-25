@@ -32,3 +32,5 @@ public class NotAloneTest {
             NotAlone.notAlone(new int[]{1, 1, 1, 2}, 1));
     }
 }
+
+

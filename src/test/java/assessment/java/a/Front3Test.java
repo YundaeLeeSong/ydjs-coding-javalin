@@ -15,3 +15,5 @@ public class Front3Test {
         assertEquals("", Front3.front3(""));
     }
 }
+
+

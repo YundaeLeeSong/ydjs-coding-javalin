@@ -26,3 +26,5 @@ public class Sum28Test {
         assertTrue(Sum28.sum28(new int[]{5, 2, 2, 2, 4, 2}));
     }
 }
+
+

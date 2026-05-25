@@ -26,3 +26,5 @@ public class Has22 {
         return false;
     }
 }
+
+

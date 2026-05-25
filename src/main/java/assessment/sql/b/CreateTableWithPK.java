@@ -2,10 +2,9 @@ package assessment.sql.b;
 
 
 import javaz.util.ConnectionUtil;
-import javaz.util.FileManager;
+import javaz.io.FileManager;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -70,7 +69,7 @@ public class CreateTableWithPK {
          * multi-line formatting).
          *
          */
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/b/primarykey_problem1.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/b/primarykey_problem1.sql").get(0);
 
         try {
             Connection connection = ConnectionUtil.getConnection();
@@ -81,3 +80,5 @@ public class CreateTableWithPK {
         }
     }
 }
+
+

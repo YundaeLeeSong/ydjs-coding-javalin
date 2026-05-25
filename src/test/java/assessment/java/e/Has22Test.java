@@ -28,3 +28,5 @@ public class Has22Test {
         assertFalse(Has22.has22(new int[]{5, 2, 5, 2}));
     }
 }
+
+

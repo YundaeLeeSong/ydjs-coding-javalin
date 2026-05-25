@@ -25,3 +25,5 @@ public class SumDigitsTest {
         assertEquals(10, SumDigits.sumDigits(235));
     }
 }
+
+
