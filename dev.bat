@@ -780,8 +780,10 @@ echo.%CYAN%C:\Program Files\AutoHotkey\v2%RESET%
 @REM ---------------------------------------------------------------------------
 call :Install-App "astral-sh.uv" "uv" "uv" "uv"
 
-
-
+@REM ---------------------------------------------------------------------------
+@REM Platform Independent - Java IDE
+@REM ---------------------------------------------------------------------------
+call :Install-App "JetBrains.IntelliJIDEA.Community" "IntelliJ IDEA Community" "" "JetBrains" "SKIP_VERIFY"
 
 @REM -----------------------------
 @REM winget search <ID>
