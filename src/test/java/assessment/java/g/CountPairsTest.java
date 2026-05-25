@@ -25,3 +25,5 @@ public class CountPairsTest {
         assertEquals(1, CountPairs.countPairs("aaa"));
     }
 }
+
+

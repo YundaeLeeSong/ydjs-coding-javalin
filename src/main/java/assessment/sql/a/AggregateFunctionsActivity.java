@@ -2,7 +2,8 @@ package assessment.sql.a;
 
 
 import javaz.util.ConnectionUtil;
-import javaz.util.FileManager;
+import javaz.io.FileManager;
+
 
 import java.sql.*;
 
@@ -61,7 +62,7 @@ public class AggregateFunctionsActivity {
          * problem1.sql file.
          * Note: the output should not contain any other info but the sum.
          */
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/a/aggregatefunctions_problem1.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/a/aggregatefunctions_problem1.sql").get(0);
 
         double average = 0.0;
         try {
@@ -88,7 +89,7 @@ public class AggregateFunctionsActivity {
          * problem2.sql file.
          * Note: the output should not contain any other info but the count.
          */
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/a/aggregatefunctions_problem2.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/a/aggregatefunctions_problem2.sql").get(0);
 
 
         int count = 0;
@@ -117,7 +118,7 @@ public class AggregateFunctionsActivity {
          * problem3.sql file.
          * Note: the output should not contain any other info but the salary.
          */
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/a/aggregatefunctions_problem3.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/a/aggregatefunctions_problem3.sql").get(0);
 
 
         double minimum = 0.0;
@@ -145,7 +146,7 @@ public class AggregateFunctionsActivity {
          * problem4.sql file.
          * Note: the output should not contain any other info but the salary.
          */
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/a/aggregatefunctions_problem4.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/a/aggregatefunctions_problem4.sql").get(0);
 
 
         double maximum = 0.0;
@@ -164,3 +165,5 @@ public class AggregateFunctionsActivity {
         return maximum;
     }
 }
+
+

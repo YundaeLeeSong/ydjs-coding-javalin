@@ -26,3 +26,5 @@ public class SplitOdd10Test {
         assertFalse(SplitOdd10.splitOdd10(new int[]{10, 7, 5, 5, 1}));
     }
 }
+
+

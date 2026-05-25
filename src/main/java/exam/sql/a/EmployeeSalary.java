@@ -14,5 +14,7 @@ package exam.sql.a;
  * by salary descending.
  */
 public class EmployeeSalary {
-    public static final String SQL_FILE_PATH = "src/main/resources/exam/sql/a/employee_salary.sql";
+    public static final String SQL_FILE_PATH = "exam/sql/a/employee_salary.sql";
 }
+
+

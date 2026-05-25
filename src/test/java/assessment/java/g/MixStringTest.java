@@ -27,3 +27,5 @@ public class MixStringTest {
         assertEquals("LSoong", MixString.mixString("Long", "So"));
     }
 }
+
+

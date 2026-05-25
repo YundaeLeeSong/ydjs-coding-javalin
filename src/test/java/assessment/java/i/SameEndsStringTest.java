@@ -26,3 +26,5 @@ public class SameEndsStringTest {
         assertEquals("my", SameEndsString.sameEnds("mymmy"));
     }
 }
+
+

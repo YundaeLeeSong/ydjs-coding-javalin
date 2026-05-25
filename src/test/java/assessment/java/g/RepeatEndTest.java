@@ -22,3 +22,5 @@ public class RepeatEndTest {
         assertEquals("", RepeatEnd.repeatEnd("", 0));
     }
 }
+
+

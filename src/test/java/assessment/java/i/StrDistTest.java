@@ -28,3 +28,5 @@ public class StrDistTest {
         assertEquals(2, StrDist.strDist("hiHellohihihi", "II"));
     }
 }
+
+

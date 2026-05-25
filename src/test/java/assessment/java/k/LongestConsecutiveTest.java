@@ -30,3 +30,5 @@ public class LongestConsecutiveTest {
                 new int[]{10, 5, 6, 7, 100}));
     }
 }
+
+

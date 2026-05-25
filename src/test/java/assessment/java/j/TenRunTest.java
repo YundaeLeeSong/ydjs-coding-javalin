@@ -30,3 +30,5 @@ public class TenRunTest {
         assertArrayEquals(new int[]{}, TenRun.tenRun(new int[]{}));
     }
 }
+
+

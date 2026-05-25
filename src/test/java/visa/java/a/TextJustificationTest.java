@@ -56,3 +56,5 @@ public class TextJustificationTest {
         assertEquals(Arrays.asList(), tj.fullJustify(new String[0], 20));
     }
 }
+
+

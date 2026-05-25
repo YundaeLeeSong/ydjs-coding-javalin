@@ -35,5 +35,7 @@ package exam.sql.a;
  * checking and savings account found in the accounts table.
  */
 public class HighBalanceUsers {
-    public static final String SQL_FILE_PATH = "src/main/resources/exam/sql/a/high_balance_users.sql";
+    public static final String SQL_FILE_PATH = "exam/sql/a/high_balance_users.sql";
 }
+
+

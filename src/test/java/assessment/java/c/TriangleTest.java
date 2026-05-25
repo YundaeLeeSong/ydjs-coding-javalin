@@ -22,3 +22,5 @@ public class TriangleTest {
         assertEquals(28, Triangle.triangle(7));
     }
 }
+
+

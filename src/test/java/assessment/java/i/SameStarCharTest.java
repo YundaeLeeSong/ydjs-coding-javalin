@@ -28,3 +28,5 @@ public class SameStarCharTest {
         assertTrue(SameStarChar.sameStarChar("**"));
     }
 }
+
+

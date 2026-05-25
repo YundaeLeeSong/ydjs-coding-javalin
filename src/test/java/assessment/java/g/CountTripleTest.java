@@ -25,3 +25,5 @@ public class CountTripleTest {
         assertEquals(1, CountTriple.countTriple("122abhhh2"));
     }
 }
+
+

@@ -32,3 +32,5 @@ public class Count8Test {
         assertEquals(1, Count8.count8(78));
     }
 }
+
+

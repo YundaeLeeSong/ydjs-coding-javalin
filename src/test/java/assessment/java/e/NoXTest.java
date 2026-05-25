@@ -20,3 +20,5 @@ public class NoXTest {
         assertEquals("Hello", NoX.noX("Hellox"));
     }
 }
+
+

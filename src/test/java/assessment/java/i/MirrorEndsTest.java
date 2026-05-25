@@ -25,3 +25,5 @@ public class MirrorEndsTest {
         assertEquals("ba", MirrorEnds.mirrorEnds("band andab"));
     }
 }
+
+

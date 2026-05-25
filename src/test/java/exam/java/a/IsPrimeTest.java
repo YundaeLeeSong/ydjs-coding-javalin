@@ -29,3 +29,5 @@ public class IsPrimeTest {
         assertTrue(IsPrime.isPrime(11));
     }
 }
+
+

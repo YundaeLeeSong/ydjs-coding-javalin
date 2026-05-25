@@ -1,8 +1,8 @@
 package assessment.sql.c;
 
 
+import javaz.io.FileManager;
 import javaz.util.ConnectionUtil;
-import javaz.util.FileManager;
 
 import java.sql.*;
 import java.util.HashSet;
@@ -68,7 +68,7 @@ public class FilteringLogicActivity {
          * multi-line formatting).
          *
          */
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/c/selectwhereandor_problem1.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/c/selectwhereandor_problem1.sql").get(0);
 
 
         //The following code will execute your statement on the database
@@ -98,7 +98,7 @@ public class FilteringLogicActivity {
          * multi-line formatting).
          *
          */
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/c/selectwhereandor_problem2.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/c/selectwhereandor_problem2.sql").get(0);
 
 
         //The following code will execute your statement on the database
@@ -129,7 +129,7 @@ public class FilteringLogicActivity {
          * multi-line formatting).
          *
          */
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/c/selectwhereandor_problem3.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/c/selectwhereandor_problem3.sql").get(0);
 
 
         //The following code will execute your statement on the database
@@ -150,3 +150,5 @@ public class FilteringLogicActivity {
     }
 
 }
+
+

@@ -19,3 +19,5 @@ public class HasOneTest {
         assertFalse(HasOne.hasOne(56556));
     }
 }
+
+

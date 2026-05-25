@@ -23,3 +23,5 @@ public class RepeatFrontTest {
         assertEquals("J", RepeatFront.repeatFront("Java", 1));
     }
 }
+
+

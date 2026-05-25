@@ -23,3 +23,5 @@ public class CountHiTest {
         assertEquals(2, CountHi.countHi("hiho not HOHIhi"));
     }
 }
+
+

@@ -27,3 +27,5 @@ public class ParenBitTest {
         assertEquals("(ab)", ParenBit.parenBit("ab(ab)ab"));
     }
 }
+
+

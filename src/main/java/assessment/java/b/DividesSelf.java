@@ -26,3 +26,5 @@ public class DividesSelf {
         return false;
     }
 }
+
+

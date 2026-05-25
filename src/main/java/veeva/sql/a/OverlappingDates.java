@@ -19,5 +19,7 @@ package veeva.sql.a;
  * *sub_id is the primary key
  */
 public class OverlappingDates {
-    public static final String SQL_FILE_PATH = "src/main/resources/veeva/sql/a/overlapping_dates.sql";
+    public static final String SQL_FILE_PATH = "veeva/sql/a/overlapping_dates.sql";
 }
+
+

@@ -24,3 +24,5 @@ public class CanBalanceTest {
         assertFalse(CanBalance.canBalance(new int[]{1}));
     }
 }
+
+

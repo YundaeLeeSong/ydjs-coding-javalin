@@ -38,3 +38,5 @@ public class SumHeights2Test {
             new int[]{10, 8, 7, 7, 7, 6, 7}, 1, 5));
     }
 }
+
+

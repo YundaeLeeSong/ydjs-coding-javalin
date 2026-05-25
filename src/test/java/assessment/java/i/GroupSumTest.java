@@ -27,3 +27,5 @@ public class GroupSumTest {
         assertTrue(GroupSum.groupSum(0, new int[]{10, 2, 2, 5}, 9));
     }
 }
+
+

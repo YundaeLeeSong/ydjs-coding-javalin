@@ -33,3 +33,5 @@ public class No14Test {
         assertFalse(No14.no14(new int[]{1, 4, 4}));
     }
 }
+
+

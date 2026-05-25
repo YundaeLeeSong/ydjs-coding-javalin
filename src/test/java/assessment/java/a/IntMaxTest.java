@@ -19,3 +19,5 @@ public class IntMaxTest {
         assertEquals(6, IntMax.intMax(5, 2, 6));
     }
 }
+
+

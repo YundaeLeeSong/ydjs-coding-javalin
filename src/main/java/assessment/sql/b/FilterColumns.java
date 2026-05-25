@@ -1,7 +1,7 @@
 package assessment.sql.b;
 
+import javaz.io.FileManager;
 import javaz.util.ConnectionUtil;
-import javaz.util.FileManager;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -46,7 +46,7 @@ public class FilterColumns {
      */
 
     public List<User> problem1(){
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/b/selectcolumns_problem1.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/b/selectcolumns_problem1.sql").get(0);
 
         List<User> users = new ArrayList<>();
         try {
@@ -64,3 +64,5 @@ public class FilterColumns {
     }
 
 }
+
+

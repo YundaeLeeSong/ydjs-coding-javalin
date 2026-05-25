@@ -23,3 +23,5 @@ public class LoneSumTest {
         assertEquals(3, LoneSum.loneSum(1, 3, 1));
     }
 }
+
+

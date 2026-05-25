@@ -24,3 +24,5 @@ public class PairStarTest {
         assertEquals("ab*b*ba", PairStar.pairStar("abbba"));
     }
 }
+
+

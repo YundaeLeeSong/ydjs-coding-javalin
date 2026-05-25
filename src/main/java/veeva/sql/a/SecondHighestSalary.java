@@ -17,5 +17,7 @@ package veeva.sql.a;
  * *id is the primary key
  */
 public class SecondHighestSalary {
-    public static final String SQL_FILE_PATH = "src/main/resources/veeva/sql/a/second_highest_salary.sql";
+    public static final String SQL_FILE_PATH = "veeva/sql/a/second_highest_salary.sql";
 }
+
+

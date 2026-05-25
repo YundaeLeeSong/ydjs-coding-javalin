@@ -30,3 +30,5 @@ public class EqualHalvesTest {
         assertTrue(EqualHalves.equalHalves(new Integer[]{8, 2, 5, 1, 9, 5}));
     }
 }
+
+

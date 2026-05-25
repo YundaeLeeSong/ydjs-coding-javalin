@@ -36,3 +36,5 @@ public class CalculateHoursTest {
             CalculateHours.calculateHours(new Integer[]{60, 1}));
     }
 }
+
+

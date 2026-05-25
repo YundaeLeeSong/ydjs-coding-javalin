@@ -26,3 +26,5 @@ public class GroupNoAdjTest {
         assertTrue(GroupNoAdj.groupNoAdj(0, new int[]{5, 10, 4, 1}, 11));
     }
 }
+
+

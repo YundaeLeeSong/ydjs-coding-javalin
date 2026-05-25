@@ -26,3 +26,5 @@ public class HaveThreeTest {
         assertFalse(HaveThree.haveThree(new int[]{1}));
     }
 }
+
+

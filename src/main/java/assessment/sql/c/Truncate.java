@@ -1,7 +1,7 @@
 package assessment.sql.c;
 
+import javaz.io.FileManager;
 import javaz.util.ConnectionUtil;
-import javaz.util.FileManager;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -35,7 +35,7 @@ public class Truncate {
          * multi-line formatting).
          *
          */
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/c/truncate_problem1.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/c/truncate_problem1.sql").get(0);
 
 
 
@@ -49,3 +49,5 @@ public class Truncate {
         }
     }
 }
+
+

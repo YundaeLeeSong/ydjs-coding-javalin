@@ -26,3 +26,5 @@ public class MinTimeToVisitAllPointsTest {
         assertEquals(0, solver.minTimeToVisitAllPoints(new int[0][0]));
     }
 }
+
+

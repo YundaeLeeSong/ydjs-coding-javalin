@@ -3,7 +3,7 @@ package assessment.sql.a;
 
 
 import javaz.util.ConnectionUtil;
-import javaz.util.FileManager;
+import javaz.io.FileManager;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -99,7 +99,7 @@ public class CreateTableWithForeignKey {
          * user_fk column will be a foreign key to
          * the site_user table's id column.
          */
-        String sql = javaz.util.FileManager.parseSqlFile("src/main/resources/assessment/sql/a/foreignkey_problem1.sql").get(0);
+        String sql = FileManager.parseSqlFile("assessment/sql/a/foreignkey_problem1.sql").get(0);
 
         try {
             Connection connection = ConnectionUtil.getConnection();
@@ -111,3 +111,5 @@ public class CreateTableWithForeignKey {
         }
     }
 }
+
+

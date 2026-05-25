@@ -25,3 +25,5 @@ public class PowerNTest {
         assertEquals(1000, PowerN.powerN(10, 3));
     }
 }
+
+

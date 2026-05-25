@@ -35,3 +35,5 @@ public class IsEverywhereTest {
         assertTrue(IsEverywhere.isEverywhere(new int[]{2, 1, 2, 1, 2}, 2));
     }
 }
+
+

@@ -26,3 +26,5 @@ public class CloseFarTest {
         assertTrue(CloseFar.closeFar(8, 6, 9));
     }
 }
+
+

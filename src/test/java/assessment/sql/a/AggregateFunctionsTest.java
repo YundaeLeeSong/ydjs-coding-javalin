@@ -1,15 +1,11 @@
 package assessment.sql.a;
 
 
-import javaz.util.ConnectionUtil;
+import javaz.io.FileManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -73,7 +69,7 @@ public class AggregateFunctionsTest {
     public void beforeEach() {
         try {
             java.sql.Connection conn = javaz.util.ConnectionUtil.getConnection();
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/a/aggregatefunctions_reset.sql")) { conn.prepareStatement(statement).executeUpdate(); } for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/a/aggregatefunctions_setup.sql")) { conn.prepareStatement(statement).executeUpdate(); }
+            for (String statement : FileManager.parseSqlFile("assessment/sql/a/aggregatefunctions_reset.sql")) { conn.prepareStatement(statement).executeUpdate(); } for (String statement : FileManager.parseSqlFile("assessment/sql/a/aggregatefunctions_setup.sql")) { conn.prepareStatement(statement).executeUpdate(); }
         } catch(Exception e) {
             e.printStackTrace();
         }
@@ -83,7 +79,7 @@ public class AggregateFunctionsTest {
     public void afterEach() {
         try {
             java.sql.Connection conn = javaz.util.ConnectionUtil.getConnection();
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/a/aggregatefunctions_reset.sql")) {
+            for (String statement : FileManager.parseSqlFile("assessment/sql/a/aggregatefunctions_reset.sql")) {
                 conn.prepareStatement(statement).executeUpdate();
             }
         } catch(Exception e) {
@@ -91,3 +87,5 @@ public class AggregateFunctionsTest {
         }
     }
 }
+
+

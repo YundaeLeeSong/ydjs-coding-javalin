@@ -30,3 +30,5 @@ public class FurthestDistanceFromOriginTest {
         assertEquals(0, solver.furthestDistanceFromOrigin(""));
     }
 }
+
+

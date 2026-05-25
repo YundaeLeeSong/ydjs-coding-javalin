@@ -31,3 +31,5 @@ public class Has12Test {
         assertTrue(Has12.has12(new int[]{1, 2}));
     }
 }
+
+

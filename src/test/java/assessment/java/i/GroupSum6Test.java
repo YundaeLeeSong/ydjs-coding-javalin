@@ -32,3 +32,5 @@ public class GroupSum6Test {
         assertFalse(GroupSum6.groupSum6(0, new int[]{1, 6, 2, 6, 5}, 16));
     }
 }
+
+

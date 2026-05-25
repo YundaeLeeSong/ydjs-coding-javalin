@@ -23,3 +23,5 @@ public class SumDigitsTest {
         assertEquals(14, SumDigits.sumDigits("5432a"));
     }
 }
+
+

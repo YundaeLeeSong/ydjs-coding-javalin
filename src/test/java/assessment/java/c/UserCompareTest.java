@@ -22,3 +22,5 @@ public class UserCompareTest {
         assertEquals(1, UserCompare.userCompare("bzb", 1, "bob", 2));
     }
 }
+
+

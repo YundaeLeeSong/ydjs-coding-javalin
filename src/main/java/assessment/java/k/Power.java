@@ -32,3 +32,5 @@ public class Power {
         return 0;
     }
 }
+
+

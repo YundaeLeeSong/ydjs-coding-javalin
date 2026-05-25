@@ -1,11 +1,11 @@
 package assessment.sql.a;
 
 
+import javaz.io.FileManager;
 import javaz.util.ConnectionUtil;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -24,7 +24,7 @@ public class CreateATableTest {
     public void afterEach(){
         try {
             java.sql.Connection conn = javaz.util.ConnectionUtil.getConnection();
-            for (String statement : javaz.util.FileManager.parseSqlFile("src/test/resources/assessment/sql/a/createtable_reset.sql")) {
+            for (String statement : FileManager.parseSqlFile("assessment/sql/a/createtable_reset.sql")) {
                 conn.prepareStatement(statement).executeUpdate();
             }
         } catch(Exception e) {
@@ -52,3 +52,5 @@ public class CreateATableTest {
     }
 
 }
+
+

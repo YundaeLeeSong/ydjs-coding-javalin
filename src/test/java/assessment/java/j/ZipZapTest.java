@@ -26,3 +26,5 @@ public class ZipZapTest {
         assertEquals("azbcpzp", ZipZap.zipZap("azbcpzpp"));
     }
 }
+
+

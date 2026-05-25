@@ -28,3 +28,5 @@ public class More14Test {
         assertTrue(More14.more14(new int[]{1, 4, 1, 4, 1, 6}));
     }
 }
+
+

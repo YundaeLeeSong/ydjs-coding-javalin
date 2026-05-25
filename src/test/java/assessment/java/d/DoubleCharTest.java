@@ -23,3 +23,5 @@ public class DoubleCharTest {
         assertEquals("aaaa", DoubleChar.doubleChar("aa"));
     }
 }
+
+

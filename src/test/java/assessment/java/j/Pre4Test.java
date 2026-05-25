@@ -34,3 +34,5 @@ public class Pre4Test {
             Pre4.pre4(new int[]{2, 1, 2, 1, 4, 2}));
     }
 }
+
+

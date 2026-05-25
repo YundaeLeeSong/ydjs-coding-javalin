@@ -46,3 +46,5 @@ public class CenteredAverageTest {
             new int[]{6, 4, 8, 12, 3}));
     }
 }
+
+

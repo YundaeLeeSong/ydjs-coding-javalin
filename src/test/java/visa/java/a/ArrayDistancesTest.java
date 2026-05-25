@@ -28,3 +28,5 @@ public class ArrayDistancesTest {
         assertArrayEquals(new long[0], solver.distance(new int[0]));
     }
 }
+
+
