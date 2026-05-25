@@ -28,14 +28,14 @@ jobs:
           - "assessment.java.i.*Test"
           - "assessment.java.j.*Test"
           - "assessment.java.k.*Test"
-          - "assessment.java.l.*Test"
           - "assessment.sql.a.*Test"
           - "assessment.sql.b.*Test"
           - "assessment.sql.c.*Test"
-          - "assessment.sql.s.*Test"
+          - "exam.java.a.*Test"
+          - "exam.sql.a.*Test"
           - "veeva.java.a.*Test"
           - "veeva.sql.a.*Test"
-          - "visa.*Test"
+          - "visa.java.a.*Test"
       # fail-fast: false ensures that if one job fails, the other parallel jobs will continue to run
       fail-fast: false
 
