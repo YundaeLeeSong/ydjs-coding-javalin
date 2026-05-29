@@ -37,6 +37,14 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+        
+        <!-- JUnit Vintage Engine for running JUnit 4 tests alongside JUnit 5 -->
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>5.9.3</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
